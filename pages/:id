@@ -1,6 +1,6 @@
 
 
-<div  id="main_content" class="container">
+<div  id="main_content" class="renovation-container">
     <ul class="breadcrumb">
         <li><a href="/home">Home</a> </li>
         <li class="active" id="active_breadcrumb"></li>
