@@ -49,6 +49,7 @@
             renderpageHTML();
             $("#loading").hide();
             $( "#page_content" ).fadeIn( "fast");
+            $( "#main_content" ).fadeIn( "fast");
         }
         
         function renderpageHTML(){
