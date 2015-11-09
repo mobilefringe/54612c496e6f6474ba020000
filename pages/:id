@@ -48,7 +48,7 @@
             renderPageData('#centre_info_container','#centre_info_template',propertyDetails, 'property_details')
             renderpageHTML();
             $("#loading").hide();
-            $( "#main_content" ).fadeIn( "fast");
+            $( "#page_content" ).fadeIn( "fast");
         }
         
         function renderpageHTML(){
