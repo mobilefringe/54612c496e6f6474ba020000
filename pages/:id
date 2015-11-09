@@ -47,7 +47,7 @@
             var propertyDetails = getPropertyDetails();
             renderPageData('#centre_info_container','#centre_info_template',propertyDetails, 'property_details')
             renderpageHTML();
-            $("#loading_screen").hide();
+            $("#loading").hide();
             $( "#main_content" ).fadeIn( "fast");
         }
         
