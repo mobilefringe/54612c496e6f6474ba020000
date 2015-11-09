@@ -5,9 +5,9 @@
         <li><a href="/home">Home</a> </li>
         <li class="active" id="active_breadcrumb"></li>
     </ul>
-    <h3 class="page_banner" id="page_title">
+    <h class="page_banner" id="page_title">
     
-    </h3>
+    </h1>
     <div class="inside_page_content" >
         <div id="mm_page_content">
             
