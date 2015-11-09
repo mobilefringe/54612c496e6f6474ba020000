@@ -24,16 +24,6 @@
                <h4>you may have mis-typed the URL, please check your spelling and try again.</h4>
           </section>
         </div>
-        <div class="right_column">
-            <p class="right_column_header">centre information</p>
-            <div id="centre_info_container">
-                <script id="centre_info_template" type="x-tmpl-mustache/text">
-                    <p class="directory_content">{{name}}</p>
-                    <p class="directory_content">{{address1}}</p>
-                    <p class="directory_content">{{city}}, {{province_state}} {{postal_code}}</p>
-                </script>
-            </div>
-        </div>
         
     </div>
     
