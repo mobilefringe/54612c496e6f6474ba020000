@@ -34,9 +34,9 @@
             
                 <script id="banner_template" type="x-tmpl-mustache">
                <div class="item">
-                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
-                      <img alt="..." src="{{photo_url_abs}}">
-                      </a>
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                        <img alt="banner" src="{{image_url}}" />
+                    </a>
                 </div>
             
                 </script>
