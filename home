@@ -205,7 +205,7 @@ function renderBanner(banner_template, home_banner, repo){
          }
        }
     });
-
+console.log(item_list)
     $.each( item_list , function( key, val ) {
         var repo_rendered = Mustache.render(banner_template_html,val);
         item_rendered.push(repo_rendered);
