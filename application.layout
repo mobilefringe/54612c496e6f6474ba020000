@@ -627,12 +627,7 @@
                     $('#pp_url').attr('href',  pp.photo_link)
                 }
                 //popup starts
-                var pathArray = window.location.pathname.split( '/' );
-                var slug = pathArray[pathArray.length-1];
-                
-                
-                  
-                    var visited = $.cookie("visited_contest");
+                    var visited = $.cookie("visited");
                     var winwidth = $(window).width();
                     
                     if(visited == null){ 
