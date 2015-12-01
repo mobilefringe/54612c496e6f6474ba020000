@@ -632,7 +632,7 @@
                     
                     if(visited == null){ 
                         visited = 1; 
-                        $.cookie('visited_contest', visited, { expires: 7 }); 
+                        $.cookie('visited', visited, { expires: 7 }); 
                     }
                     if (visited == 0) {
                         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || winwidth <= 700) {
@@ -641,10 +641,10 @@
                              $(".hidden-popup-bg").show();
                         }
                         visited++;
-                        $.cookie('visited_contest', visited, { expires: 7 });
+                        $.cookie('visited', visited, { expires: 7 });
                     } else {
                         visited++;
-                        $.cookie('visited_contest', visited, { expires: 7 });
+                        $.cookie('visited', visited, { expires: 7 });
                         return false;
                     } 
                     
