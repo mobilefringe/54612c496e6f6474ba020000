@@ -184,7 +184,6 @@ function renderBanner(banner_template, home_banner, repo){
     Mustache.parse(banner_template_html);   // optional, speeds up future uses
     
     $.each( repo , function( key, val ) {
-        console.log("here" +val.url)
        if(val.url == ""){
            val.css = "style=cursor:default;";
            val.noLink = "return false";
