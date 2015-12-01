@@ -1,0 +1,291 @@
+<style>
+    .page_content{
+        padding-top:0px;
+    }
+    .navbar{
+        margin-bottom:0px;
+    }
+    #loading{
+        margin-top:100px;
+    }
+    .bottom-nav{
+        -moz-box-shadow:    inset 0 10px 10px -10px #777777;
+        -webkit-box-shadow: inset 0 10px 10px -10px #777777;
+        box-shadow: inset 0 10px 10px -10px #777777;
+    }
+
+    .bottom-nav .navbar-collapse{
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+</style>
+<div class="home">
+        <div data-ride="carousel" class="carousel slide" id="carousel-example-generic">
+          <!-- Indicators -->
+            <ol class="carousel-indicators" id="banner_indicator" style="{{show_style}}">
+                <script id="indicator_template" type="x-tmpl-mustache">
+                    <li data-slide-to="{{slide_number}}" data-target="#carousel-example-generic" class="{{active_carousel}}"></li>                        
+                </script>
+            </ol>
+            
+              <!-- Wrapper for slides -->
+            <div class="carousel-inner" id="home_banner">
+            
+                <script id="banner_template" type="x-tmpl-mustache">
+               <div class="item">
+                        <a href="{{url}}" {{css}} onclick="{{noLink}}">
+                      <img alt="..." src="{{photo_url_abs}}">
+                      </a>
+                </div>
+            
+                </script>
+            </div>
+            
+            <div id="controls">
+              <!-- Controls -->
+              <a data-slide="prev" role="button" href="#carousel-example-generic" class="left carousel-control">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a data-slide="next" role="button" href="#carousel-example-generic" class="right carousel-control">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              </div>
+        </div>
+
+
+
+</div>
+<div class="feature-items-section">
+        <div class="container">
+        <div class="row feature-items">
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
+               <div id="todays-hours">
+                   <script id="todays_hours_template" type="x-tmpl-mustache">
+                        <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
+                        <div>{{holiday_name}}</div>
+                        <span class="today_hour" style="{{is_open_css}};">
+                            {{open_time_localized}} - {{close_time_localized}}
+                        </span>
+                        <span style="{{is_closed_css}};">
+                            Closed
+                        </span>
+                    </script>
+                </div>
+                <div id="hours_not_empty_section_id">
+                    <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
+                    <script id="holiday_hours_template" type="x-tmpl-mustache">
+                        
+                        <li class="">
+                            <span class="bold">{{holiday_name}}</span>
+                            <div style="{{is_open_css}};">
+                                {{open_time_localized}} - {{close_time_localized}}
+                            </div>
+                            <div style="{{is_closed_css}};">
+                                Closed
+                            </div>
+                        </li>
+                        
+                    </script>
+                    <ul class="holiday-hours" id="holiday-hours">
+                        <!--this content to be rendered by renderHolidayHours(..) -->
+                    </ul>
+                </div>
+                <div id="hours_empty_section_id"></div>
+                <a href="../about_us#opening_hours" class="btn btn-default" style="margin-top:32px;">Click For More</a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+               <div class="header" data-i18n="general.directions"></div>
+               <a href="../about_us#contact_us">
+           <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_map.jpg" class="" alt="" style="width:100%">
+        
+    
+            </a>
+             </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
+                <div class="header" >Gift cards</div>
+                <a href="../gift_cards">
+                    <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_giftcard.jpg" class="" alt=""  style="width:100%">
+                </a>
+            </div>
+            <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
+               <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
+               <span id="join_txt" data-i18n="general.join_txt" style="font-size:14px"></span>
+               <div class="newsletter-sign-up" style="margin-top:15px">
+                    <form action="http://mobilefringe.createsend.com/t/d/s/ykbo/" method="post" id="subForm">
+                       <label for="subscribe_email" style="display:none"> subscribe email </label>
+                            <input id="fieldEmail" name="cm-ykbo-ykbo" type="email" required placeholder="enter email" /> 
+                       <div class="checkbox">
+                        <span>
+                          <input type="checkbox" class="info_check" id="agree_terms" style="margin-left:-15px; width:15px"/>&nbsp;I agree to receive emails from Londonderry
+                        </span>
+                      </div>
+                        <button class="btn btn-default feature-item-button"  data-i18n="general.submit"></button>
+                       <br />
+                       
+                   </form>
+                </div>
+                <span id="success_subscribe" style="font-size:20px;padding:10px">Thank You!</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        function renderPageData(){
+            //console.log('rendering page data');
+            holiday_hours = findClosestHoliday(getPropertyHours());
+            renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',holiday_hours,2);
+            
+            renderTodaysHours('#todays_hours_template','#todays-hours');
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+            
+            
+             var repoList = getRepoList();
+             renderIndicator('#indicator_template','#banner_indicator', repoList);
+            renderBanner('#banner_template','#home_banner',repoList);
+        }
+        loadMallData(renderPageData);
+        
+       
+        $('#subForm').submit(function (e) {
+           if ($("#agree_terms").prop("checked") != true){
+               alert("Please agree to the term and conditions.");
+               $("#agree_terms").focus();
+               return false;
+           }
+           e.preventDefault();
+           $.getJSON(
+               
+               this.action + "?callback=?",
+               $(this).serialize(),
+               function (data) {
+                   if (data.Status === 400) {
+                       console.log(data);
+                       alert("Please try again later.");
+                   } else { // 200
+                       $("#success_subscribe").fadeIn().delay(5000).fadeOut();
+                        $("#fieldEmail").val('');
+                      //$("#subForm").fadeOut();
+                      //$("#join_txt").fadeOut();
+                   }
+           });
+       });
+    });
+    
+    
+function renderBanner(banner_template, home_banner, repo){
+    
+    var item_list = [];
+    var item_rendered = [];
+    var banner_template_html = $(banner_template).html();
+    Mustache.parse(banner_template_html);   // optional, speeds up future uses
+
+    $.each( repo , function( key, val ) {
+        if( true){
+            $.each( val.images , function( key, val ) {
+               if(val.url == ""){
+                   val.css = "style=cursor:default;";
+                   val.noLink = "return false";
+               }
+                item_list.push(val);
+               
+            });
+        }
+    });
+    item_list.sort(function(a, b){
+        if(a.name < b.name) return -1;
+        if(a.name > b.name) return 1;
+        return 0;
+    });
+    $.each( item_list , function( key, val ) {
+            var repo_rendered = Mustache.render(banner_template_html,val);
+            item_rendered.push(repo_rendered);
+           
+    });
+    
+   
+    $(home_banner).show();
+    $(home_banner).html(item_rendered.join(''));
+    $('.item').first().addClass('active');
+}
+
+function findClosestHoliday(hours){
+    var holiday_list = [];
+    
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    
+    if(dd<10) {
+        dd='0'+dd
+    } 
+    
+    if(mm<10) {
+        mm='0'+mm
+    } 
+    
+    today = yyyy+'-'+mm+'-'+dd;
+    
+    $.each( hours , function( key, val ) {
+        if(val.is_holiday && val.holiday_date > today){
+            holiday_list.push(val);
+        }
+    });
+    holiday_list.sort(sortByHolidayDate);
+    
+    return holiday_list;
+}
+    
+function sortByHolidayDate(a, b){
+    var aDate = a.holiday_date;
+    var bDate = b.holiday_date;
+
+    return ((aDate < bDate) ? -1 : ((aDate > bDate) ? 1 : 0));  
+}    
+    
+function renderIndicator(indicator_template, home_indicator, repo){
+    
+    var item_list = [];
+    var item_rendered = [];
+    var banner_template_html = $(indicator_template).html();
+    Mustache.parse(banner_template_html);   // optional, speeds up future uses
+    var bannerCount = 0;
+    
+    $.each( repo , function( key, val ) {
+        if( val.name == "banner"){
+            $.each( val.images , function( key, val ) {
+                item_list.push(val);
+            });
+        }
+    });
+    item_list.sort(function(a, b){
+        if(a.name < b.name) return -1;
+        if(a.name > b.name) return 1;
+        return 0;
+    });
+    $.each( item_list , function( key, val ) {
+      
+           
+        if (bannerCount == 0){
+            val.active_carousel = "active";
+        }
+        val.slide_number = bannerCount;
+        
+        var repo_rendered = Mustache.render(banner_template_html,val);
+        item_rendered.push(repo_rendered);
+         bannerCount ++;
+    });
+    
+    if(item_list.length <= 1){
+        $(home_indicator).hide();
+        $('#controls').hide();
+    } else {
+         $(home_indicator).show();
+    }
+    $(home_indicator).html(item_rendered.join(''));
+}
+</script>
