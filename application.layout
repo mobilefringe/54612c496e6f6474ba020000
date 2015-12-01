@@ -184,7 +184,6 @@
    
    
     <!-- popup html form starts-->
-    <!--
     <div class="hidden-popup-bg">
         <div class="hidden-popup-form">
             <div class="popup-header">
@@ -198,7 +197,6 @@
        </div>
 
     </div>
-    --!>
     <!-- popup form ends-->
     
     <!-- Navigation -->
