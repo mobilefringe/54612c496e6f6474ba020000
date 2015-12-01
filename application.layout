@@ -116,11 +116,6 @@
             });
             
             //popup starts
-            var pp = getPopups()[0];
-            if (pp != undefined){
-                $('#pp_img').attr('src', 'http://cdn.mallmaverick.com' +pp.photo_url)
-                $('#pp_url').attr('href',  pp.photo_link)
-            }
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             
@@ -665,7 +660,12 @@
             
                 var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
                 $('#center_signature').html(centre_signature);
-                
+                 var pp = getPopups()[0];
+            
+                if (pp != undefined){
+                    $('#pp_img').attr('src', 'http://cdn.mallmaverick.com' +pp.photo_url)
+                    $('#pp_url').attr('href',  pp.photo_link)
+                }
                 
             }
             //loadMallData is located in mallmaverick.js, the call back method ensures the data is loaded
