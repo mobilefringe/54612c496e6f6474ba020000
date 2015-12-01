@@ -116,7 +116,7 @@
             });
             
             //popup starts
-            var pp = getPopups()[0];
+            var pp = getPopups();
             if (pp != undefined){
                 $('#pp_img').attr('src', 'http://cdn.mallmaverick.com' +pp.photo_url)
                 $('#pp_url').attr('href',  pp.photo_link)
