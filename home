@@ -250,7 +250,7 @@ function sortByHolidayDate(a, b){
     return ((aDate < bDate) ? -1 : ((aDate > bDate) ? 1 : 0));  
 }    
     
-function renderIndicator(indicator_template, home_indicator, repo){
+function renderIndicator(indicator_template, home_indicator, banners){
     
     var item_list = [];
     var item_rendered = [];
@@ -258,13 +258,29 @@ function renderIndicator(indicator_template, home_indicator, repo){
     Mustache.parse(banner_template_html);   // optional, speeds up future uses
     var bannerCount = 0;
     
-    $.each( repo , function( key, val ) {
-        if( val.name == "banner"){
-            $.each( val.images , function( key, val ) {
-                item_list.push(val);
-            });
-        }
+    $.each( banners , function( key, val ) {
+        today = new Date();
+        start = new Date (val.start_date);
+       
+        start.setDate(start.getDate());
+       if(val.url == "" || val.url === null){
+           val.css = "style=cursor:default;";
+           val.noLink = "return false";
+       }
+       if (start <= today){
+         if (val.end_date){
+             end = new Date (val.end_date);
+             end.setDate(end.getDate() + 1);
+             if (end >= today){
+               item_list.push(val);  
+             }
+             
+         } else {
+             item_list.push(val);
+         }
+       }
     });
+
     item_list.sort(function(a, b){
         if(a.name < b.name) return -1;
         if(a.name > b.name) return 1;
