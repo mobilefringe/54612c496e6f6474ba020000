@@ -116,6 +116,11 @@
             });
             
             //popup starts
+            var pp = getPopups();
+            if (pp != undefined){
+                $('#pp_img').attr('src', {{photo_link}})
+                $('#pp_url').attr('href', {{photo_url}})
+            }
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             
@@ -190,8 +195,8 @@
                <p onclick="close_popup();" class="popup-close pull-right">X</p>
             </div>
             <div class="popup-body">
-                <a href="/events/londonderry-our-gift-to-you">
-                    <img src="http://assets.codecloudapp.com/sites/5547c95a6e6f643495030000/0fd91d8a8c29171ff206ae2cd19332ee/rogers_v2.jpg" class="" alt="">
+                <a id="pp_url" href="">
+                    <img id="pp_img" src="" class="" alt="">
                 </a>
             </div>
        </div>
