@@ -182,7 +182,7 @@ function renderBanner(banner_template, home_banner, repo){
     var item_rendered = [];
     var banner_template_html = $(banner_template).html();
     Mustache.parse(banner_template_html);   // optional, speeds up future uses
-
+    console.log(repo)
     $.each( repo , function( key, val ) {
         console.log("here" +val)
        if(val.url == ""){
