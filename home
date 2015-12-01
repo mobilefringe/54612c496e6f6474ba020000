@@ -145,7 +145,7 @@
             
              var repoList = getBanners();
              renderIndicator('#indicator_template','#banner_indicator', repoList);
-            renderBanner('#banner_template','#home_banner',repoList);
+            renderBanner('#banner_template','#home_banner',getBanners());
         }
         loadMallData(renderPageData);
         
