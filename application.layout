@@ -115,46 +115,6 @@
                 imagePath: '//cdn.jsdelivr.net/jquery.jreject/1.0.2/images/'
             });
             
-            //popup starts
-            var pathArray = window.location.pathname.split( '/' );
-            var slug = pathArray[pathArray.length-1];
-            
-            if (slug.length===0 || slug ==="/" ||slug.match(/^\/?home/)){
-              
-                var visited = $.cookie("visited_contest");
-                var winwidth = $(window).width();
-                
-                if(visited == null){ 
-                    visited = 1; 
-                    $.cookie('visited_contest', visited, { expires: 7 }); 
-                }
-                if (visited == 0) {
-                    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || winwidth <= 700) {
-                        $(".hidden-popup-bg").show();
-                    }else{
-                         $(".hidden-popup-bg").show();
-                    }
-                    visited++;
-                    $.cookie('visited_contest', visited, { expires: 7 });
-                } else {
-                    visited++;
-                    $.cookie('visited_contest', visited, { expires: 7 });
-                    return false;
-                } 
-                
-                $(".hidden-popup-bg").click(function(event){
-                    if( !$( event.target).is('.hidden-popup-form') ) {
-                        close_popup();
-                    } else {
-                        event.stopPropagation();
-                    }
-                });
-                
-                $(".hidden-popup-bg .hidden-popup-form").click(function(event){
-                    event.stopPropagation();
-                }); 
-                
-            }
             
         });
     
@@ -661,11 +621,51 @@
                 var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
                 $('#center_signature').html(centre_signature);
                  var pp = getPopups()[0];
-            
+                
                 if (pp != undefined){
                     $('#pp_img').attr('src', 'http://cdn.mallmaverick.com' +pp.photo_url)
                     $('#pp_url').attr('href',  pp.photo_link)
                 }
+                //popup starts
+                var pathArray = window.location.pathname.split( '/' );
+                var slug = pathArray[pathArray.length-1];
+                
+                
+                  
+                    var visited = $.cookie("visited_contest");
+                    var winwidth = $(window).width();
+                    
+                    if(visited == null){ 
+                        visited = 1; 
+                        $.cookie('visited_contest', visited, { expires: 7 }); 
+                    }
+                    if (visited == 0) {
+                        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || winwidth <= 700) {
+                            $(".hidden-popup-bg").show();
+                        }else{
+                             $(".hidden-popup-bg").show();
+                        }
+                        visited++;
+                        $.cookie('visited_contest', visited, { expires: 7 });
+                    } else {
+                        visited++;
+                        $.cookie('visited_contest', visited, { expires: 7 });
+                        return false;
+                    } 
+                    
+                    $(".hidden-popup-bg").click(function(event){
+                        if( !$( event.target).is('.hidden-popup-form') ) {
+                            close_popup();
+                        } else {
+                            event.stopPropagation();
+                        }
+                    });
+                    
+                    $(".hidden-popup-bg .hidden-popup-form").click(function(event){
+                        event.stopPropagation();
+                    }); 
+                    
+                
                 
             }
             //loadMallData is located in mallmaverick.js, the call back method ensures the data is loaded
