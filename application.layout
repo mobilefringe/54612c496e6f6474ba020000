@@ -119,7 +119,7 @@
             var pp = getPopups()[0];
             if (pp != undefined){
                 $('#pp_img').attr('src', pp.photo_url)
-                $('#pp_url').attr('href', pp.photo_link)
+                $('#pp_url').attr('href', 'http://cdn.mallamverick.com' + pp.photo_link)
             }
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
