@@ -196,6 +196,7 @@ background-color: #FFFFFF ;
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             var store_details = getStoreDetailsBySlug(slug);
+             document.title = "Londonderry Mall | " + store_details.name;
             checkErrorPage(store_details);
             store_details.map_x_coordinate = store_details.x_coordinate - 19;
             store_details.map_y_coordinate = store_details.y_coordinate - 58;
