@@ -36,7 +36,11 @@
 $(document).ready(function() {
     function renderPageData(){
         //console.log(getPostList())
-        renderPostListTemplate('#blog_item_template', '#blog_list',getAllPublishedPosts());
+        // renderPostListTemplate('#blog_item_template', '#blog_list',getPostList());
+        
+        var posts = getAllPublishedPosts();
+            var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse();
+            renderPostListTemplate('#blog_item_template', '#blog_list',published_posts);
         $('#loading').hide();
         $('#page_content').fadeIn('fast');
     }
