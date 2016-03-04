@@ -36,11 +36,8 @@
 $(document).ready(function() {
     function renderPageData(){
         //console.log(getPostList())
-        // renderPostListTemplate('#blog_item_template', '#blog_list',getPostList());
+        renderPostListTemplate('#blog_item_template', '#blog_list',getPostList());
         
-        var posts = getAllPublishedPosts();
-            var published_posts = posts.sortBy(function(o){ return new Date(o.publish_date) }).reverse();
-            renderPostListTemplate('#blog_item_template', '#blog_list',published_posts);
         $('#loading').hide();
         $('#page_content').fadeIn('fast');
     }
@@ -56,7 +53,14 @@ function renderPostListTemplate(blog_template, blog_block, post){
     Mustache.parse(blog_template_html);   // optional, speeds up future uses
 
     $.each( post , function( key, val ) {
-        item_list.push(val);
+        
+        var publish_date = new Date(val.publish_date);
+        var today = new Date();
+        if (publish_date <= today){
+            item_list.push(val);
+        }
+        
+        // item_list.push(val);
     });
     item_list.sort(function(a, b){
         if(a.publish_date > b.publish_date) return -1;
