@@ -251,7 +251,7 @@ img{
    width:100%;
    position:fixed;
    z-index:999999999;
-   display:none !important;
+   display:none ;
    top:0;
 }
 .popup-header{
