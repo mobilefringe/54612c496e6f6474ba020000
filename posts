@@ -22,7 +22,7 @@
                     <h2 class="blogpost_title">
                         <a href='/posts/{{slug}}'>{{ title }}</a>
                     </h2>
-                    <p class="blogpost_date"><span class="blog-author">by {{ author }{</span> <span class="regular">|</span> {{ publish_date }}</p>
+                    <p class="blogpost_date"><span class="blog-author">by {{ author }{</span> <span class="regular">|</span> {{ published_on }}</p>
                     <img src="{{ image_url }}" />
                     <p class="blogpost_discription">{{ body }}</p>
                     <a href='/posts/{{slug}}' class="readmore">Read More</a>
