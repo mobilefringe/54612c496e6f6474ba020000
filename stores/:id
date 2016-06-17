@@ -275,7 +275,7 @@ background-color: #FFFFFF ;
         var y_offset = (parseInt(height) /2);
         map.setMarks([{ xy: [coords["x"] - 46 + x_offset, coords["y"] - 110 + y_offset],
             attrs: {
-                src:  'http://assets.codecloudapp.com/sites/562a661e6e6f64426b000000/image/png/1452532624000/pin_93.png'
+                src:  'http://kodekloud.s3.amazonaws.com/sites/5438407c6e6f64462d020000/7760d28d65f477cd66bd4756f9204c15/map_pin2.png'
             }
         }]);
         map.setViewBox(id);
