@@ -247,7 +247,7 @@ background-color: #FFFFFF ;
         this_region = store_details.svgmap_region;
         map = $('#mapsvg_store_detail').mapSvg({
             source: getSVGMapURL(),    // Path to SVG map
-            colors: {stroke: '#aaa', hover: 0, selected: '#EF4D86'},
+            colors: {stroke: '#aaa', hover: 0, selected: '#88c54c'},
             disableAll: true,
             height:335,
             width:848,
