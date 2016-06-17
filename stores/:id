@@ -255,7 +255,7 @@ background-color: #FFFFFF ;
             tooltipsMode:'custom',
             loadingText: "loading...",
             zoom: true,
-            zoomButtons: {'show': true,'location': 'left' },
+            zoomButtons: {'show': false,'location': 'right' },
             pan:true,
             cursor:'pointer',
             responsive:true,
