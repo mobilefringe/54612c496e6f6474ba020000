@@ -247,7 +247,7 @@ background-color: #FFFFFF ;
         this_region = store_details.svgmap_region;
         map = $('#mapsvg_store_detail').mapSvg({
             source: getSVGMapURL(),    // Path to SVG map
-            colors: {stroke: '#aaa', hover: 0, selected: '#88c54c'},
+            colors: {stroke: '#aaa', hover: 0, selected: '#EF4D86'},
             disableAll: true,
             height:335,
             width:848,
@@ -255,7 +255,7 @@ background-color: #FFFFFF ;
             tooltipsMode:'custom',
             loadingText: "loading...",
             zoom: true,
-            zoomButtons: {'show': true,'location': 'right' },
+            zoomButtons: {'show': false,'location': 'left' },
             pan:true,
             cursor:'pointer',
             responsive:true,
@@ -267,18 +267,18 @@ background-color: #FFFFFF ;
         drop_pin(store_details.svgmap_region);
     }
     function drop_pin(id){
-        map.marksHide();
-        var coords = map.get_coords(id);
-        var height = parseInt(coords["height"]);
-        var width = parseInt(coords["width"]);
-        var x_offset = (parseInt(width) / 2);
-        var y_offset = (parseInt(height) /2);
-        map.setMarks([{ xy: [coords["x"] - 46 + x_offset, coords["y"] - 110 + y_offset],
-            attrs: {
-                src:  'http://assets.codecloudapp.com/sites/562a661e6e6f64426b000000/image/png/1452532624000/pin_93.png'
-            }
-        }]);
-        map.setViewBox(id);
-        $('#btnZoomIn').click()
-    }
+    map.marksHide();
+    var coords = map.get_coords(id);
+    var height = parseInt(coords["height"]);
+    var width = parseInt(coords["width"]);
+    var x_offset = (parseInt(width) / 2);
+    var y_offset = (parseInt(height) /2);
+    map.setMarks([{ xy: [coords["x"] - 46 + x_offset, coords["y"] - 110 + y_offset],
+        attrs: {
+            src:  'http://assets.codecloudapp.com/sites/562a661e6e6f64426b000000/image/png/1452532624000/pin_93.png'
+        }
+    }]);
+    map.setViewBox(id);
+    $('#btnZoomIn').click()
+}
 </script>
