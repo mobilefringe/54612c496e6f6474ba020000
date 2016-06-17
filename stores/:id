@@ -249,18 +249,18 @@ background-color: #FFFFFF ;
             source: getSVGMapURL(),    // Path to SVG map
             colors: {stroke: '#aaa', hover: 0, selected: '#88c54c'},
             disableAll: true,
-            height:335,
-            width:848,
+            height:800,
+            width:1140,
             regions: reg,
             tooltipsMode:'custom',
             loadingText: "loading...",
             zoom: true,
-            zoomButtons: {'show': false,'location': 'right' },
+            zoomButtons: {'show': true,'location': 'right' },
             pan:true,
+            panLimit:true,
             cursor:'pointer',
             responsive:true,
-            zoomLimit: [0,5],
-            viewBox:[420,420,1650,1650]
+            zoomLimit: [0,10],
         });
         map.setViewBox(store_details.svgmap_region);
         map.selectRegion(store_details.svgmap_region);
