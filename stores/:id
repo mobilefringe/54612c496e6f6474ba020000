@@ -49,17 +49,8 @@ background-color: #FFFFFF ;
             <!-- END MUSTACHE TEMPLATE FOR STORE DETAILS-->
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9">
-            
-              
-                
-                <div class="store_map" id="store_map">
-                    <script id="store_deatils_map_template" type="x-tmpl-mustache">
-                        <div class="demo1">
-                            <img src="http://assets.codecloudapp.com/sites/54612c496e6f6474ba020000/image/png/undefined/LondonderryMall_Map_3500x2000-2016-06-16.png" class="imgMap" id="map_image" />                
-                	        <div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">{{name}}</div>	
-            	        </div>   
-                    </script>
-                 </div> 
+            <div id="mapsvg_store_detail" class="mobile_padding"></div>
+         </div> 
 
                 
                 
