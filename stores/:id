@@ -50,10 +50,6 @@ background-color: #FFFFFF ;
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9">
             <div id="mapsvg_store_detail" class="mobile_padding"></div>
-         
-
-                
-                
             <div id="store_details2">
                 <!-- START MUSTACHE TEMPLATE FOR STORE DETAILS-->
                 <script id="store_details_template2" type="x-tmpl-mustache">
@@ -279,5 +275,9 @@ background-color: #FFFFFF ;
             }
         }]);
         map.setViewBox(id);
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
     }
 </script>
