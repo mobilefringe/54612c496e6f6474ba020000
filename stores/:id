@@ -218,8 +218,8 @@ background-color: #FFFFFF ;
             $(function(){
                 $('.demo1').craftmap({
                     image: {
-            			width: 840,
-        				height: 2040,
+            			width: 3500,
+        				height: 2000,
         				name: 'imgMap'
         			},
         			map: {
