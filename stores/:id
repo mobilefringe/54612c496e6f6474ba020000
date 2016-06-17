@@ -55,7 +55,7 @@ background-color: #FFFFFF ;
                 <div class="store_map" id="store_map">
                     <script id="store_deatils_map_template" type="x-tmpl-mustache">
                         <div class="demo1">
-                            <img src="http://assets.codecloudapp.com/sites/54612c496e6f6474ba020000/e29d3d5449bd0cd4c6d468142dd716f3/londonderrymap-Recovered.jpg" class="imgMap" id="map_image" />                
+                            <img src="http://assets.codecloudapp.com/sites/54612c496e6f6474ba020000/image/png/undefined/LondonderryMall_Map_3500x2000-2016-06-16.png" class="imgMap" id="map_image" />                
                 	        <div class="marker" id='scroll_to_marker' data-coords="{{map_x_coordinate}}, {{map_y_coordinate}}">{{name}}</div>	
             	        </div>   
                     </script>
