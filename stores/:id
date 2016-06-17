@@ -214,20 +214,18 @@ background-color: #FFFFFF ;
 
             $('#loading').hide();
             $('#page_content').fadeIn();
-            $(function(){
-                $('.demo1').craftmap({
-                    image: {
-            			width: 3500,
-        				height: 2000,
-        				name: 'imgMap'
-        			},
-        			map: {
-        				position: 'center'
-        			}
-        		});
-    		    $("#anchor_id").click();
-           	    $("#scroll_to_marker").click();
+            regions = {};
+            var stores = getStoresList();
+            $.each( stores , function( key, val ) {
+                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                    obj = {};
+                    obj["tooltip"] = "<div class='tooltip_div'><p class='tooltip_name'>"+val.name+"</p></div>"
+                    obj["attr"] = {}
+                    obj["attr"]["href"] = "/stores/"+val.slug
+                    regions[val.svgmap_region] = obj
+                }
             });
+            load_map(regions, store_details);
             
         }
            
