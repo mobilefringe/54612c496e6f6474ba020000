@@ -272,9 +272,9 @@
                     <li class="page-scroll" style="">
                         <a href="../promotions" data-i18n="nav.promotions"></a>
                     </li>
-                    <li class="page-scroll" style="">
+                   <!-- <li class="page-scroll" style="">
                         <a href="../events" data-i18n="nav.events"></a>
-                    </li>
+                    </li> -->
                     <li class="page-scroll" style="">
                         <a href="../services" >Services</a>
                     </li>
@@ -342,9 +342,9 @@
                     <li class="page-scroll" style="">
                         <a href="../promotions" data-i18n="nav.promotions"></a>
                     </li>
-                    <li class="page-scroll" style="">
+                  <!--  <li class="page-scroll" style="">
                         <a href="../events" data-i18n="nav.events"></a>
-                    </li>
+                    </li>  -->
                     <li class="page-scroll" style="">
                         <a href="../services">Services</a>
                     </li>
