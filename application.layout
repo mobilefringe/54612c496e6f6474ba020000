@@ -266,11 +266,7 @@
                     
                     <li class="page-scroll dropdown" style="">
                         <a href="../stores" data-i18n="nav.stores" style="min-height:50px"></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="/blog">Get The Look</a>
-                            </li>
-                        </ul>
+                        
                     </li>
                     
                     <li class="page-scroll" style="">
@@ -290,6 +286,11 @@
                     </li>
                     <li class="page-scroll" style="">
                         <a href="../posts">Blog</a>
+                    <ul class="dropdown-menu">
+                            <li>
+                                <a href="/blog">Get The Look</a>
+                            </li>
+                        </ul>    
                     </li>
                       <li class="page-scroll" style="">
                         <a href="../renovation">Renovation</a>
