@@ -338,9 +338,7 @@
                     <li class="page-scroll" style="">
                         <a href="../stores" data-i18n="nav.stores"></a>
                     </li>
-                     <li class="page-scroll" style="">
-                                <a href="/blog?v=1.0.1">Get The Look</a>
-                    </li>
+                    
                     <li class="page-scroll" style="">
                         <a href="../promotions" data-i18n="nav.promotions"></a>
                     </li>
@@ -358,6 +356,9 @@
                     </li>
                     <li class="page-scroll" style="">
                         <a href="../posts">Blog</a>
+                    </li>
+                     <li class="page-scroll" style="">
+                                <a href="/blog?v=1.0.1">Get The Look</a>
                     </li>
                       <li class="page-scroll" style="">
                         <a href="../renovation">Renovation</a>
