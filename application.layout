@@ -40,7 +40,7 @@
     <!-- Custom CSS -->
     <link href="/application.css" rel="stylesheet">
     <!-- flexslider css -->
-    <link href="http://cdn.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/flexslider.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.css" rel="stylesheet">
     
     <!-- jQuery Version 1.11.0 -->
     
