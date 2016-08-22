@@ -40,7 +40,7 @@
     <!-- Custom CSS -->
     <link href="/application.css" rel="stylesheet">
     <!-- flexslider css -->
-    <link href="http://app.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/flexslider.css" rel="stylesheet">
+    <link href="http://cdn.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/flexslider.css" rel="stylesheet">
     
     <!-- jQuery Version 1.11.0 -->
     
@@ -60,7 +60,7 @@
     <link href="//cdn.jsdelivr.net/jquery.jreject/1.0.2/css/jquery.reject.css" rel="stylesheet" type="text/css">
 
     <!-- flexslider for banner -->
-    <script src="http://app.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
+    <script src="http://cdn.codecloudapp.com/sites/54612c496e6f6474ba020000/18e2e634c26a051a8eedcc896c229e80/jquery.flexslider-min.js"></script>
     
     <!-- jquery Cookie plugin-->
    <script src="http://kodekloud.s3.amazonaws.com/sites/5438407c6e6f64462d020000/601617fe9ab691b1b62a66ac3ca3e8b7/jquery.cookie.js"></script>
