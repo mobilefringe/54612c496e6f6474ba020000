@@ -119,10 +119,10 @@ function renderPromotions(container, template, collection){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("YYYY-DD-MM")
+            val.dates = start.format("YYYY-MM-DD")
         }
         else{
-            val.dates = start.format("YYYY-DD-MM") + " to " + end.format("YYYY-DD-MM")
+            val.dates = start.format("YYYY-MM-DD") + " to " + end.format("YYYY-MM-DD")
         }
         
         var rendered = Mustache.render(template_html,val);
