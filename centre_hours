@@ -26,7 +26,7 @@
         
         function renderPageData(){
             var hours = getPropertyHours();
-            renderHours("#hours_not_empty_section_id", "#regular_hours_template", hours, "reg_hours");
+            renderHours("#regular_hours_container", "#regular_hours_template", hours, "reg_hours");
             // renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
             renderHomeHours('#todays-hours', '#todays_hours_template');
             
