@@ -108,7 +108,7 @@
     $(document).ready(function() {
         
         function renderPageData(){
-            var promotions = getPromotionsList().sortBy(function(o){ return o.start_date });
+            var promotions = getPromotionsList().sortBy(function(o){ return o.start_date }).reverse();
             var published_promos = [];
             $.each( promotions , function( key, val ){
                 today = moment();
