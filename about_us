@@ -381,7 +381,7 @@
                    <!--CENTRE HOURS-->
   
             <a class="anchor" name="opening_hours"></a>
-            >
+            <%=/centre_hours%>
      
          
 
