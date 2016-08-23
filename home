@@ -138,7 +138,7 @@
             holiday_hours = findClosestHoliday(getPropertyHours());
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',holiday_hours,2);
             
-            
+            renderHomeHours('#todays_hours_search_template','#todays-hours-search');
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
             
