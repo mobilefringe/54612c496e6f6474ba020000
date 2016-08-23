@@ -28,7 +28,6 @@
             <div id="promos_container">
                 <ul class="promotion-list " id="promotion_list">
                     <h2>Loading Promotions.....</h2>
-                
                 </ul>
             </div>
             <script id="promotion_item_template" type="x-tmpl-mustache">
