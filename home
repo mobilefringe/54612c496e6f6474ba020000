@@ -64,7 +64,7 @@
                <div id="todays-hours">
                    <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day}}"></h5>
-                        <div>{{holiday_name}}</div>
+                        <div>{{day}}</div>
                         <span class="today_hour">{{h}}</span>
                     </script>
                 </div>
