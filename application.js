@@ -2,6 +2,7 @@ function renderHomeHours(container, template){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
+    var collection = getTodaysHours();
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);    
     $.each( item_list , function( key, val ) {
