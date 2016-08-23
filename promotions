@@ -88,11 +88,12 @@
                     published_promos.push(val);
                 } 
             });
-            if(published_promos.length == 0){
+            if(published_promos.length > 0){
                 renderPromotions("#promotion_list","#promotion_item_template", published_promos);
             }
             else{
-                $('#promotions_empty_section').show()
+                $('#promotions_empty_section').show();
+                $('#promotion_list').hide();
             }
             
             renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
