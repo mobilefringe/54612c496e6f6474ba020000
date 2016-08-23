@@ -88,7 +88,7 @@
                     published_promos.push(val);
                 } 
             });
-            if(published_promos.length < 0){
+            if(published_promos.length > 0){
                 renderPromotions("#promotion_list","#promotion_item_template", published_promos);
             }
             else{
