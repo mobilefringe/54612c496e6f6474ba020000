@@ -23,7 +23,7 @@
     <h4 data-i18n="general.holiday_hours"></h4>
     <ul class="list-group" id="holiday_hours_container">
         <script id="holiday_hours_template" type="x-tmpl-mustache">
-            <li class="list-group-item" id="reg_hours_sun">
+            <li class="list-group-item clearfix" id="reg_hours_sun">
                 <span class="pull-left">
                     {{holiday_name}}</br>
                     {{holiday_date_localized}}
