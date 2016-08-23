@@ -86,7 +86,6 @@
                         <!--this content to be rendered by renderHolidayHours(..) -->
                     </ul>
                 </div>
-                <div id="hours_empty_section_id"></div>
                 <a href="../about_us#opening_hours" class="btn btn-default" style="margin-top:32px;">Click For More</a>
             </div>
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
