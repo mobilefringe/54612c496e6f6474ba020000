@@ -47,7 +47,7 @@
                             <h4><a href="/stores/{{ store_detail_btn }}">{{ store_name }}</a></h4>
                         </div>
                         <div class="dates">
-                            {{ start_date }} to {{ end_date }}
+                            dates
                         </div>
                         <div class="description">
                             <p>{{ description }}</p>
