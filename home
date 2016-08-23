@@ -68,9 +68,6 @@
                         <span class="today_hour" style="{{is_open_css}};">
                             {{h}}
                         </span>
-                        <span style="{{is_closed_css}};">
-                            Closed
-                        </span>
                     </script>
                 </div>
                 <div id="hours_not_empty_section_id">
