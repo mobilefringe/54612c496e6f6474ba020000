@@ -70,14 +70,10 @@
                 <div id="hours_not_empty_section_id">
                     <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
                     <script id="holiday_hours_template" type="x-tmpl-mustache">
-                        
-                        <li class="">
-                            <span class="bold">{{holiday_name}}</span>
-                            <div>
-                                {{h}}
-                            </div>
-                        </li>
-                        
+                        <span class="bold">{{holiday_name}}</span>
+                        <div>
+                            {{h}}
+                        </div>
                     </script>
                     <ul class="holiday-hours" id="holiday-hours">
                         <!--this content to be rendered by renderHolidayHours(..) -->
