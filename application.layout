@@ -243,9 +243,6 @@
                                         <span style="{{is_open_css}};">
                                             {{h}}
                                         </span>
-                                        <span style="{{is_closed_css}};">
-                                            Closed
-                                        </span>
                                     </script>{% endraw %}
                                 </a>
                               </ul>
