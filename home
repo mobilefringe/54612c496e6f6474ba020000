@@ -79,7 +79,7 @@
                         
                         <li class="">
                             <span class="bold">{{holiday_name}}</span>
-                            <div style="{{is_open_css}};">
+                            <div>
                                 {{open_time_localized}} - {{close_time_localized}}
                             </div>
                         </li>
