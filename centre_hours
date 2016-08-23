@@ -26,7 +26,7 @@
             <li class="list-group-item clearfix" id="reg_hours_sun">
                 <span class="pull-left">
                     {{holiday_name}}</br>
-                    {{holiday_date_localized}}
+                    {{formatted_date}}
                 </span>
                 <div class="pull-right">
                     {{h}}
