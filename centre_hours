@@ -24,7 +24,10 @@
     <ul class="list-group" id="holiday_hours_container">
         <script id="holiday_hours_template" type="x-tmpl-mustache">
             <li class="list-group-item" id="reg_hours_sun">
-                <span data-i18n="days_of_week.{{day_of_week}}"></span>
+                <span class="pull-left">
+                    {{holiday_name}}</br>
+                    {{holiday_date_localized}}
+                </span>
                 <div class="pull-right">
                     {{h}}
                 </div>
