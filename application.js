@@ -23,7 +23,9 @@ function renderHomeHours(container, template){
     $(container).html(item_rendered.join(''));
 }
 
-
+function in_my_time_zone(hour, format){
+    return hour.tz(getPropertyTimeZone()).format(format)
+}
 
 function get_day(id){
     switch(id) {
