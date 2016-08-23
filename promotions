@@ -44,7 +44,7 @@
                             <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
                         </div>
                         <div class="store-name">
-                            <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                            <h4><a href="{{ promotionable_url }}">{{ store_name }}</a></h4>
                         </div>
                         <div class="dates">
                             {{ start_date }} to {{ end_date }}
@@ -63,35 +63,6 @@
                     </div>
                 </li>
             </script>
-            <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
-                <li class="promotion-list-item row">
-                    <a name="{{store_name}}"></a>
-                    <div class="promo-details col-xs-12">
-                        <div class="name">
-                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
-                        </div>
-                        <div class="store-name">
-                            <h4>{{ store_name }}</h4>
-                        </div>
-                        <div class="dates">
-                            {{ start_date }} to {{ end_date }}
-                        </div>
-                        <div class="description">
-                            <p>{{ description }}</p>
-                        </div>
-                        <div class="social-links">
-                            <span><a href="http://www.facebook.com/sharer.php?u=http://londonderrymall.com/promotions/{{slug}}" target="_blank">
-<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
-                            </a></span>
-                            <span><a href="http://twitter.com/?status={{name}}%20%20http://londonderrymall.com/promotions/{{slug}}" target="_blank">
-<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
-                                   </a></span>
-                        </div>
-                    </div>
-                </li>
-            </script>
-                
-            
             <div id='promotions_empty_section' style="display:none">
                 <h2 data-i18n="general.no_promotions"></h2>
             </div>
