@@ -7,7 +7,7 @@ function renderHomeHours(container, template){
     item_list.push(collection);    
     $.each( item_list , function( key, val ) {
         val.day = get_day(val.day_of_week);
-        var d = new Date();
+        var d = moment().tz(getPropertyTimeZone());
         val.month = get_month(d.getMonth());
         val.weekday = addZero(d.getDate());
         if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
