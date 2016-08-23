@@ -24,7 +24,7 @@
     <ul class="list-group" id="holiday_hours_container">
         <script id="holiday_hours_template" type="x-tmpl-mustache">
             <li class="list-group-item clearfix" id="reg_hours_sun">
-                <span class="pull-left">
+                <span class="">
                     {{holiday_name}}</br>
                     {{formatted_date}}
                 </span>
