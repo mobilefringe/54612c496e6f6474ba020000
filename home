@@ -67,6 +67,8 @@
                         <span class="today_hour">{{h}}</span>
                     </script>
                 </div>
+                
+                <br />
                 <div id="hours_not_empty_section_id">
                     <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
                     <script id="holiday_hours_template" type="x-tmpl-mustache">
