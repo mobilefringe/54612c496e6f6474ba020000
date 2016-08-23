@@ -1,4 +1,4 @@
-function renderHomeHours(container, template, collection){
+function renderHomeHours(container, template){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
