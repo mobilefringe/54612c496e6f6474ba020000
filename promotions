@@ -122,9 +122,9 @@
                 renderPromotions("#promos_container","#promos_template", published_promos);
             }
             else{
-                $('#no_promos').show()
+                $('#promotions_empty_section').show()
             }
-            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image','#promotion_list','#promotions_not_empty_section','#promotions_empty_section', promo_array);
+            r
             renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
