@@ -115,10 +115,6 @@ function renderPromotions(container, template, collection){
             val.store_name = "Londonderry Mall";
         }
         
-        if(val.image_url.indexOf('missing.png') > 0){
-            val.image_url  = ""
-        }
-        
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
