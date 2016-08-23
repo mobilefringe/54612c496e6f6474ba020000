@@ -78,7 +78,7 @@
             renderRegularDayHours('#regular_hours_template','#reg_hours_fri',5);
             renderRegularDayHours('#regular_hours_template','#reg_hours_sat',6);
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',getPropertyHours(),100);
-            renderHomeHours('#todays_hours_template','#todays-hours');
+            renderHomeHours('#todays-hours', '#todays_hours_template');
             
             if(typeof($(document)) != 'undefined'){
                 $(document).i18n();
