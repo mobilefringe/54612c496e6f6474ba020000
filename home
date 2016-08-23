@@ -65,9 +65,7 @@
                    <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day}}"></h5>
                         <div>{{holiday_name}}</div>
-                        <span class="today_hour" style="{{is_open_css}};">
-                            {{h}}
-                        </span>
+                        <span class="today_hour">{{h}}</span>
                     </script>
                 </div>
                 <div id="hours_not_empty_section_id">
