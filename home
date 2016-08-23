@@ -63,7 +63,7 @@
                <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
                <div id="todays-hours">
                    <script id="todays_hours_template" type="x-tmpl-mustache">
-                        <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
+                        <h5 data-i18n="days_of_week.{{day}}"></h5>
                         <div>{{holiday_name}}</div>
                         <span class="today_hour" style="{{is_open_css}};">
                             {{h}}
