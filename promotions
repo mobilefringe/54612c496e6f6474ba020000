@@ -65,13 +65,13 @@
             </script>
             <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
                 <li class="promotion-list-item row">
-                    <a name="{{promotionable_name}}"></a>
+                    <a name="{{store_name}}"></a>
                     <div class="promo-details col-xs-12">
                         <div class="name">
                             <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
                         </div>
                         <div class="store-name">
-                            <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                            <h4><a href="{{ promotionable_url }}">{{ store_name }}</a></h4>
                         </div>
                         <div class="dates">
                             {{ start_date }} to {{ end_date }}
