@@ -25,7 +25,7 @@
             </div>          
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
-            <div id="promotions_not_empty_section">
+            <div id="promos_container">
                 <ul class="promotion-list " id="promotion_list">
                     <h2>Loading Promotions.....</h2>
                 
