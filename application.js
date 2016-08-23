@@ -112,8 +112,7 @@ function renderPromotions(container, template, collection){
             val.image_url = store_details.store_front_url_abs;
         }
         else{
-            val.store_name = "Dixie Outlet";
-            val.image_url = "http://assets.codecloudapp.com/sites/57b7340e6e6f644972020000/image/jpeg/1446753494000/Dixie_default.jpg";
+            val.store_name = "Londonderry Mall";
         }
         
         if(val.image_url.indexOf('missing.png') > 0){
