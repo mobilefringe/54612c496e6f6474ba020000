@@ -68,7 +68,7 @@
     <!-- google recaptcha -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <!--MallMaverick v=0.3-->
-    <script src="http://mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
+    <script src="http://preview-mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
     <script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
     <script>
         function close_popup(){
