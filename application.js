@@ -137,7 +137,7 @@ function renderPromotionDetails(container, template, collection){
     var template_html = $(template).html();
     Mustache.parse(template_html); 
     item_list.push(collection)
-    $.each( collection , function( key, val ) {
+    $.each( item_list , function( key, val ) {
         if (val.promotionable_type == "Store") {
             var store_details = getStoreDetailsByID(val.promotionable_id);
             val.store_detail_btn = store_details.slug ;
@@ -145,17 +145,22 @@ function renderPromotionDetails(container, template, collection){
             val.image_url = store_details.store_front_url_abs;
         }
         else{
-            val.store_name = "Londonderry Mall";
+            val.store_name = "Dixie Outlet";
+            val.image_url = "http://assets.codecloudapp.com/sites/57b7340e6e6f644972020000/image/jpeg/1446753494000/Dixie_default.jpg";
+        }
+        
+        if(val.image_url.indexOf('missing.png') > 0){
+            val.image_url  = "http://assets.codecloudapp.com/sites/57b7340e6e6f644972020000/image/jpeg/1446753494000/Dixie_default.jpg";;
         }
         
         var show_date = moment(val.show_on_web_date);
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("YYYY-MM-DD")
+            val.dates = start.format("MMM D")
         }
         else{
-            val.dates = start.format("YYYY-MM-DD") + " to " + end.format("YYYY-MM-DD")
+            val.dates = start.format("MMM D") + " - " + end.format("MMM D")
         }
         
         var rendered = Mustache.render(template_html,val);
