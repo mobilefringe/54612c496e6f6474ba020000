@@ -61,8 +61,8 @@
         <div class="row feature-items">
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
                <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
-               <div id="home_hours">
-                   <script id="home_hours_template" type="x-tmpl-mustache">
+               <div id="todays-hours">
+                   <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day}}"></h5>
                         <div>{{holiday_name}}</div>
                         <span class="today_hour" style="{{is_open_css}};">
@@ -138,7 +138,7 @@
             holiday_hours = findClosestHoliday(getPropertyHours());
             renderHolidayHours('#holiday_hours_template','#holiday-hours','#hours_not_empty_section_id','#hours_empty_section_id',holiday_hours,2);
             
-            renderHomeHours('#home_hours_template','home_hours');
+            renderHomeHours('#todays_hours_template','#todays-hours');
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
             
