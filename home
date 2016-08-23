@@ -66,7 +66,7 @@
                         <h5 data-i18n="days_of_week.{{day_of_week}}"></h5>
                         <div>{{holiday_name}}</div>
                         <span class="today_hour" style="{{is_open_css}};">
-                            {{open_time_localized}} - {{close_time_localized}}
+                            {{h}}
                         </span>
                         <span style="{{is_closed_css}};">
                             Closed
