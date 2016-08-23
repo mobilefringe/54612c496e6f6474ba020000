@@ -119,7 +119,7 @@ function renderPromotions(container, template, collection){
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
-            val.dates = start.format("MMM D")
+            val.dates = start.format("YYYY-DD-MM")
         }
         else{
             val.dates = start.format("YYYY-DD-MM") + " to " + end.format("YYYY-DD-MM")
