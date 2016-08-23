@@ -70,8 +70,8 @@
                 <div id="hours_not_empty_section_id">
                     <!-- START MUSTACHE TEMPLATE FOR HOLIDAY HOURS ITEM-->
                     <script id="holiday_hours_template" type="x-tmpl-mustache">
-                        <span class="bold">{{holiday_name}}</span>
                         <div>
+                            <span class="bold">{{holiday_name}}</span>
                             {{h}}
                         </div>
                     </script>
