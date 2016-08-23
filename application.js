@@ -28,49 +28,44 @@ function renderHours(container, template, collection, type){
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    if (type == "property_details"){
-        item_list.push(collection);
-        collection = []
-        collection = item_list;
-    }
     if (type == "reg_hours") {
         $.each( collection , function( key, val ) {
             if (!val.store_id && val.is_holiday == false) {
                 switch(val.day_of_week) {
-                case 0:
-                    val.day = "Sunday"
-                    break;
-                case 1:
-                    val.day = "Monday"
-                    break;
-                case 2:
-                    val.day = "Tuesday"
-                    break;
-                case 3:
-                    val.day = "Wednesday"
-                    break;
-                case 4:
-                    val.day = "Thursday"
-                    break;
-                case 5:
-                    val.day = "Friday"
-                    break;
-                case 6:
-                    val.day = "Saturday"
-                    break;
+                    case 0:
+                        val.day = "Sunday";
+                        break;
+                    case 1:
+                        val.day = "Monday";
+                        break;
+                    case 2:
+                        val.day = "Tuesday";
+                        break;
+                    case 3:
+                        val.day = "Wednesday";
+                        break;
+                    case 4:
+                        val.day = "Thursday";
+                        break;
+                    case 5:
+                        val.day = "Friday";
+                        break;
+                    case 6:
+                        val.day = "Saturday";
+                        break;
+                }
+                if (val.open_time && val.close_time && val.is_closed == false){
+                    var open_time = in_my_time_zone(moment(val.open_time), "h:mmA");
+                    var close_time = in_my_time_zone(moment(val.close_time), "h:mmA");
+                    val.h = open_time + " - " + close_time;
+                } else {
+                    "Closed";
+                }
                 
-            }
-            if (val.open_time && val.close_time && val.is_closed == false){
-                var open_time = in_my_time_zone(moment(val.open_time), "h:mmA");
-                var close_time = in_my_time_zone(moment(val.close_time), "h:mmA");
-                val.h = open_time + " - " + close_time;
-            } else {
-                "Closed"
-            }
-                item_list.push(val)
+                item_list.push(val);
             }
         });
-        collection = []
+        collection = [];
         collection = item_list;
     }
     
@@ -78,28 +73,15 @@ function renderHours(container, template, collection, type){
         $.each( collection , function( key, val ) {
             if (!val.store_id && val.is_holiday == true) {
                 holiday = moment(val.holiday_date);
-                val.formatted_date = in_my_time_zone(holiday, "dddd MMMM D YYYY");
+                val.formatted_date = in_my_time_zone(holiday, "MMM D");
                 if (val.open_time && val.close_time && val.is_closed == false){
                     var open_time = in_my_time_zone(moment(val.open_time), "h:mmA");
                     var close_time = in_my_time_zone(moment(val.close_time), "h:mmA");
                     val.h = open_time + " - " + close_time;   
-                    item_list.push(val);
-                }
-            }
-        });
-        collection = [];
-        collection = item_list;
-    }
-    
-    if (type == "closed_hours") {
-        $.each( collection , function( key, val ) {
-            if (!val.store_id && val.is_holiday == true) {
-                holiday = moment(val.holiday_date);
-                val.formatted_date = in_my_time_zone(holiday, "dddd MMMM D YYYY");
-                if (val.open_time && val.close_time && val.is_closed == true){
+                } else {
                     val.h = "Closed";
-                    item_list.push(val);
                 }
+                item_list.push(val);
             }
         });
         collection = [];
@@ -114,7 +96,7 @@ function renderHours(container, template, collection, type){
     
     $(container).show();
     $(container).html(item_rendered.join(''));
-}
+};
 
 function in_my_time_zone(hour, format){
     return hour.tz(getPropertyTimeZone()).format(format)
