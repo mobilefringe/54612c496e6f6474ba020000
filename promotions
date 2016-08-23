@@ -118,7 +118,7 @@
                 } 
             });
             if(published_promos.length > 0){
-                renderPromotions("#promos_container","#promos_template", published_promos);
+                renderPromotions("#promos_container","#promotion_item_template", published_promos);
             }
             else{
                 $('#promotions_empty_section').show()
