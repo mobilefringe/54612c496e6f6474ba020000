@@ -73,7 +73,7 @@
                         
                         <li class="">
                             <span class="bold">{{holiday_name}}</span>
-                            <div style="{{is_open_css}};">
+                            <div>
                                 {{h}}
                             </div>
                         </li>
