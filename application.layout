@@ -70,6 +70,8 @@
     <!--MallMaverick v=0.3-->
     <script src="http://preview-mallmaverick.codecloudapp.com/mallmaverick_v3.js"></script>
     <script src="http://mallmaverick.codecloudapp.com/mustache_mallmaverick.js?v=0.3"></script>
+    
+    <script src="../application.js" type="text/javascript"></script>
     <script>
         function close_popup(){
             $(".hidden-popup-bg").fadeOut();
@@ -587,7 +589,7 @@
             
             
         function renderPageData(){
-            renderTodaysHours('#todays_hours_search_template','#todays-hours-search');
+            renderHomeHours('#todays_hours_search_template','#todays-hours-search');
         
             var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
             $('#center_signature').html(centre_signature);
