@@ -589,6 +589,8 @@
             
             
         function renderPageData(){
+            renderHomeHours('#todays_hours_search_template','#todays-hours-search');
+        
             var centre_signature = new Date().getFullYear()+ " " + getPropertyDetails().name;
             $('#center_signature').html(centre_signature);
              var pp = getPopups()[0];
