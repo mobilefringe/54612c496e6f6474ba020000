@@ -33,7 +33,7 @@
             <script id="promotion_item_template" type="x-tmpl-mustache">
                 
                 <li class="promotion-list-item row">
-                    <a class="anchor" name="{{promotionable_name}}"></a>
+                    <a class="anchor" name="{{store_name}}"></a>
                     <div class="promo-image col-xs-3">
                         <a href="../promotions/{{ slug }}">
                             <img src="{{promo_image_url_abs}}" style="width:100%">
