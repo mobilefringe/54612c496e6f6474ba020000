@@ -123,7 +123,7 @@
     $(document).ready(function() {
         function renderPageData(){
             //console.log('rendering page data');
-            holiday_hours = findClosestHoliday(getPropertyHours()).splice(1, 2);
+            holiday_hours = findClosestHoliday(getPropertyHours()).splice(0, 2);
             renderHours("#hours_not_empty_section_id", "#holiday_hours_template", holiday_hours, "holiday_hours");
             
             renderHomeHours('#todays-hours', '#todays_hours_template');
