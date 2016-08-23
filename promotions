@@ -124,7 +124,7 @@
             else{
                 $('#promotions_empty_section').show()
             }
-            r
+            
             renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
