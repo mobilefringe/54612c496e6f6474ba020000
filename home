@@ -82,9 +82,6 @@
                             <div style="{{is_open_css}};">
                                 {{open_time_localized}} - {{close_time_localized}}
                             </div>
-                            <div style="{{is_closed_css}};">
-                                Closed
-                            </div>
                         </li>
                         
                     </script>
