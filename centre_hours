@@ -13,7 +13,7 @@
         <!-- START MUSTACHE TEMPLATE FOR REGULAR HOURS ITEM-->
         <script id="regular_hours_template" type="x-tmpl-mustache">
                 <span data-i18n="days_of_week.{{day_of_week}}"></span>
-                <div class="pull-right" style="{{is_open_css}};">
+                <div class="pull-right">
                     {{h}}
                 </div>
         </script>
