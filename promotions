@@ -1,0 +1,137 @@
+<div class="container promotions">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+            <h1 data-i18n="nav.promotions"></h1>
+            <div class="panel-group stores" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z">
+                                <span data-i18n="nav.stores"></span>
+                                <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/6540f7b91971edbf439f2ff0d183c3fa/arrow_white_down.png" class="" alt="">
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body list-group" id="stores_with_promotions">
+                            <script id="store_item_template" type="x-tmpl-mustache">
+                                <a class="list-group-item" href="#{{name}}">
+                                    {{name}}
+                                </a>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
+            <div id="promotions_not_empty_section">
+                <ul class="promotion-list " id="promotion_list">
+                    <h2>Loading Promotions.....</h2>
+                
+                </ul>
+            </div>
+            <script id="promotion_item_template" type="x-tmpl-mustache">
+                
+                <li class="promotion-list-item row">
+                    <a class="anchor" name="{{promotionable_name}}"></a>
+                    <div class="promo-image col-xs-3">
+                        <a href="../promotions/{{ slug }}">
+                            <img src="{{promo_image_url_abs}}" style="width:100%">
+                        </a>
+                    </div>
+                    <div class="promo-details col-xs-9">
+                        <div class="name">
+                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                        </div>
+                        <div class="store-name">
+                            <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                        </div>
+                        <div class="dates">
+                            {{ start_date }} to {{ end_date }}
+                        </div>
+                        <div class="description">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="social-links">
+                            <span><a href="http://www.facebook.com/sharer.php?u=http://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
+                            </a></span>
+                            <span><a href="http://twitter.com/?status={{name}}%20%20http://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                                   </a></span>
+                        </div>
+                    </div>
+                </li>
+            </script>
+            <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
+                <li class="promotion-list-item row">
+                    <a name="{{promotionable_name}}"></a>
+                    <div class="promo-details col-xs-12">
+                        <div class="name">
+                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                        </div>
+                        <div class="store-name">
+                            <h4><a href="{{ promotionable_url }}">{{ promotionable_name }}</a></h4>
+                        </div>
+                        <div class="dates">
+                            {{ start_date }} to {{ end_date }}
+                        </div>
+                        <div class="description">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="social-links">
+                            <span><a href="http://www.facebook.com/sharer.php?u=http://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
+                            </a></span>
+                            <span><a href="http://twitter.com/?status={{name}}%20%20http://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                                   </a></span>
+                        </div>
+                    </div>
+                </li>
+            </script>
+                
+            
+            <div id='promotions_empty_section' style="display:none">
+                <h2 data-i18n="general.no_promotions"></h2>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+    
+    
+        
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            var promotions = getPromotionsList().sortBy(function(o){ return o.start_date });
+            var published_promos = [];
+            $.each( promotions , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_promos.push(val);
+                } 
+            });
+            if(published_promos.length > 0){
+                renderPromotions("#promos_container","#promos_template", published_promos);
+            }
+            else{
+                $('#no_promos').show()
+            }
+            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image','#promotion_list','#promotions_not_empty_section','#promotions_empty_section', promo_array);
+            renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+        }
+        
+        loadMallData(renderPageData);
+    });
+
+    
+</script>
