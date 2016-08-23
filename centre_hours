@@ -1,6 +1,5 @@
 <div class="hours">
     <h2>
-        
         <span id="todays-hours">
             <script id="todays_hours_template" type="x-tmpl-mustache">
                 <span data-i18n="general.todays_hours"><!--Today's Hours--></span>
@@ -10,15 +9,14 @@
             </script>
         </span>
     </h2>
-        <!-- START MUSTACHE TEMPLATE FOR REGULAR HOURS ITEM-->
+    <ul class="list-group">
         <script id="regular_hours_template" type="x-tmpl-mustache">
-                <span data-i18n="days_of_week.{{day_of_week}}"></span>
-                <div class="pull-right">
-                    {{h}}
-                </div>
-        </script>
-        <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->    
-    
+            <span data-i18n="days_of_week.{{day_of_week}}"></span>
+            <div class="pull-right">
+                {{h}}
+            </div>
+        </script>  
+    </ul>
     <h4 data-i18n="general.regular_hours"><!--Regular Hours--></h4>
     <ul class="list-group">
         <li class="list-group-item" id="reg_hours_sun"><!--this content to be rendered by renderRegularDayHours(..) --></li>
