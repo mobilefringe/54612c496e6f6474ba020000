@@ -17,10 +17,7 @@
         <script id="regular_hours_template" type="x-tmpl-mustache">
                 <span data-i18n="days_of_week.{{day_of_week}}"></span>
                 <div class="pull-right" style="{{is_open_css}};">
-                    {{open_time_localized}} - {{close_time_localized}}
-                </div>
-                <div class="pull-right" style="{{is_closed_css}};" data-i18n="general.closed">
-                    <!--Closed-->
+                    {{h}}
                 </div>
         </script>
         <!-- END MUSTACHE TEMPLATE FOR HOURS ITEM-->    
