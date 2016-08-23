@@ -61,7 +61,7 @@
         <div class="row feature-items">
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
                <div data-i18n="general.todays_hours" class="header feature-bottom-border"></div>
-               <div id="todays-hours">
+               <div id="home_hours">
                    <script id="todays_hours_template" type="x-tmpl-mustache">
                         <h5 data-i18n="days_of_week.{{day}}"></h5>
                         <div>{{holiday_name}}</div>
