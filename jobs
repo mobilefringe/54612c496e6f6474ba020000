@@ -1,0 +1,78 @@
+<div class="container jobs">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+            <h1 data-i18n="nav.jobs"></h1>
+            <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3d2feb8fb67ca18031833e0a252090dd/7223_Londonderry_FindAJob2.jpeg" class="hidden-xs" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9" id="right-content" style="margin-top: 15px;">
+            <div id="jobs_not_empty_section">
+                
+                <div class="panel-group" id="accordion">
+                    <div id="jobs_list">
+                    <h2>Loading Careers.....</h2>
+                    <!-- START MUSTACHE TEMPLATE FOR JOB ITEM-->
+                    <script id="job_item_template" type="x-tmpl-mustache">
+                      <a name="{{id}}">
+                      <div class="panel panel-default">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{id}}">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">
+                              {{store_name}}
+                          </h3>
+                          <h4>
+                            {{name}}&nbsp;<small>{{job_type}}</small>
+                          </h4>
+                        </div>
+                        </a>
+                        <div id="collapse{{id}}" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <p>{{{rich_description}}}</p>
+                            <h5 style="display:{{has_store_info_css}}"><a href="../stores/{{store_slug}}">Store Details</a></h5>
+                            <div style="display:{{has_contact_info_css}}">
+                                <h5>Contact Info</h5>
+                                <div>{{contact_name}}</div>
+                                <div><a href="mailto:{{contact_email}}">{{contact_email}}</a></div>
+                                <div>{{contact_phone}}</div>
+                                <div><a href="{{contact_website}}" target="_blank">{{contact_website}}</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </script>
+                    <!-- END MUSTACHE TEMPLATE FOR JOB ITEM-->
+                    </div>
+                </div>
+            </div>
+            <div id="jobs_empty_section" style="display:none">
+                <h2 data-i18n="general.no_jobs"></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            //renders the jobs list by referencing the template id and the html id
+            //for where to place the rendered content. See mallmaverick.js for implementation
+            var jobs = getJobList();
+            renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',getJobsList());
+            var published_jobs = [];
+            $.each( jobs , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_jobs.push(val);
+                } 
+            });
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+        }
+        
+        loadMallData(renderPageData);
+    });
+
+    
+</script>
