@@ -174,7 +174,7 @@ background-color: #FFFFFF ;
             
             
             var jobs = getJobsForIds(store_details.jobs);
-            var piblished_jobs = [];
+            var published_jobs = [];
             $.each( jobs , function( key, val ){
                 today = moment();
                 webDate = moment(val.show_on_web_date)
