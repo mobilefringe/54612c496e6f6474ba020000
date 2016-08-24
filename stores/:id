@@ -168,7 +168,7 @@ background-color: #FFFFFF ;
                 } 
             });
             if (store_promos.length > 0){
-                $('#jobs_not_empty_section').show();
+                $('#promotions_not_empty_section').show();
                 renderPromotions("#promotion_list", '#promotion_item_template', store_promos);
             }
             
@@ -182,7 +182,10 @@ background-color: #FFFFFF ;
                     published_jobs.push(val);
                 } 
             });
-            renderJobs('#jobs_list', '#job_item_template', jobs);
+            if (published_jobs.length > 0){
+                renderJobs('#jobs_list', '#job_item_template', jobs);
+                
+            }
 
             $('#loading').hide();
             $('#page_content').fadeIn();
