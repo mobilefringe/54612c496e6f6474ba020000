@@ -179,7 +179,7 @@ background-color: #FFFFFF ;
                 today = moment();
                 webDate = moment(val.show_on_web_date)
                 if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                    published_promos.push(val);
+                    published_jobs.push(val);
                 } 
             });
             renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',jobs);
