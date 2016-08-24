@@ -1,0 +1,290 @@
+<style>
+    .demo1{
+float: left;
+ margin-bottom:29px;
+  height: 406px;
+    width: 100%;
+background-color: #FFFFFF ;
+  border: 1px solid #b2aaab;
+
+}
+.froala-element img{
+    cursor:default !important;
+}
+.marker {
+     background: url("http://kodekloud.s3.amazonaws.com/sites/5438407c6e6f64462d020000/7760d28d65f477cd66bd4756f9204c15/map_pin2.png") no-repeat;
+   
+    cursor: pointer;
+    display: block;
+    height: 65px;
+    margin-top: 5px;
+    outline: medium none;
+    text-indent: -9999px;
+    width: 45px;
+}
+</style>
+<script src="http://kodekloud.s3.amazonaws.com/sites/5438407c6e6f64462d020000/92b82a88144a6207ab1a5e8e0f63d3d1/craftmap.js"></script>
+
+
+
+<div id="pop-over">
+    <span class="pull-left">
+        <div id="pop-over-map-name">Default Name</div>
+        <div id="pop-over-map-phone">Phone Number</div>
+    </span>
+    <span class="pullright"><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"></span>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3 store-details" id="store_details1">
+            <!-- START MUSTACHE TEMPLATE FOR STORE DETAILS-->
+            <script id="store_details_template1" type="x-tmpl-mustache">
+                <h1>{{name}}</h1>
+                <img style="width:100%;" src="{{store_front_url}}">
+                <ul>
+                    <li style="text-align:center"><h1><a href="tel:{{phone}}">{{phone}}</a></h1></li>
+                    <li><a style="width:100%" href="http://{{website}}" target="_blank" class="btn btn-default">VISIT WEBSITE</a></li>
+                </ul>
+            </script>
+            <!-- END MUSTACHE TEMPLATE FOR STORE DETAILS-->
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+            <div id="mapsvg_store_detail" class="mobile_padding"></div>
+            <div id="store_details2">
+                <!-- START MUSTACHE TEMPLATE FOR STORE DETAILS-->
+                <script id="store_details_template2" type="x-tmpl-mustache">
+                    <p>{{description}}</p>
+                </script>
+            </div>
+            <!-- END MUSTACHE TEMPLATE FOR STORE DETAILS-->
+             <ul class="promotion-list" id="promotions_not_empty_section" style="display:none">
+                <li>
+                    <h2>Promotions</h2>
+                </li>
+                <div id="promotion_list">
+                <!-- START MUSTACHE TEMPLATE FOR STORE PROMOTIONS-->
+                <script id="promotion_item_template" type="x-tmpl-mustache">
+                    <li class="promotion-list-item row">
+                        <div class="promo-image col-md-2 col-xs-4">
+                            <a href="../promotions/{{ slug }}">
+                                <img src="{{promo_image_url}}">
+                            </a>
+                        </div>
+                        <div class="promo-details col-md-10 col-xs-8">
+                            <div class="name">
+                                <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                            </div>
+                            <div class="promo-store-name">
+                                <h4><a href="{{ promo_store_url }}">{{ promo_store_name }}</a></h4>
+                            </div>
+                            <div class="dates">
+                                {{ start_date }} to {{ end_date }}
+                            </div>
+                            <div class="description">
+                                <p>{{ description }}</p>
+                            </div>
+                            <div class="social-links">
+                                <span><a href="#" target="_blank">
+                                    <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
+                                </a></span>
+                                <span><a href="#" target="_blank">
+                                <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                                </a></span>
+                            </div>
+                            </div>
+                    </li>
+                </script>
+                <script id="promotion_item_template_no_image" type="x-tmpl-mustache">
+                <li class="promotion-list-item row">
+                    <a name="{{store_name}}"></a>
+                    <div class="promo-details col-xs-12">
+                        <div class="name">
+                            <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
+                        </div>
+                        <div class="store-name">
+                            <h4><a href="{{ promotionable_url }}">{{ store_name }}</a></h4>
+                        </div>
+                        <div class="dates">
+                            {{ start_date }} to {{ end_date }}
+                        </div>
+                        <div class="description">
+                            <p>{{ description }}</p>
+                        </div>
+                        <div class="social-links">
+                             <span>
+                                <a href="#" target="_blank">
+                                    <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#" target="_blank">
+                                    <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </script>
+                <!-- END MUSTACHE TEMPLATE FOR STORE PROMOTIONS-->
+                </div>
+            </ul>
+            <div id="promotions_empty_section"></div>
+            <div id="jobs_not_empty_section" class="jobs" style="display:none">
+                <h2>Jobs</h2>
+                <div class="panel-group" id="accordion">
+                    <div id="jobs_list">
+                        <!-- START MUSTACHE TEMPLATE FOR JOB ITEM-->
+                        <script id="job_item_template" type="x-tmpl-mustache">
+                          <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{id}}">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                  {{store_name}}
+                              </h3>
+                              <h4>
+                                {{name}}&nbsp;<small>{{job_type}}</small>
+                              </h4>
+                            </div>
+                            </a>
+                            <div id="collapse{{id}}" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <p>{{description}}</p>
+                                <div style="display:{{has_contact_info_css}}">
+                                    <h5>Contact Info</h5>
+                                    <div>{{contact_name}}</div>
+                                    <div><a href="mailto:{{contact_email}}">{{contact_email}}</a></div>
+                                    <div>{{contact_phone}}</div>
+                                    <div><a href="{{contact_website}}" target="_blank">{{contact_website}}</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </script>
+                        <!-- END MUSTACHE TEMPLATE FOR JOB ITEM-->
+                    </div>
+                </div>
+            </div>
+            <div id="jobs_empty_section"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/raphael.js"></script>
+<script type="text/javascript" src="http://cdn.mallmaverick.com/javascripts/mapsvg/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="http://cdn.mallmaverick.com/system/site_images/photos/000/005/107/original/mallmaverick_svgmap.js?1412885524"></script> 
+<script>
+
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            //renders the store list by referencing the template id and the html id
+            //for where to place the rendered content. See mallmaverick.js for implementation
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var store_details = getStoreDetailsBySlug(slug);
+            checkErrorPage(store_details);
+            store_details.map_x_coordinate = store_details.x_coordinate - 19;
+            store_details.map_y_coordinate = store_details.y_coordinate - 58;
+            
+            store_details.store_front_url = changeStoreImgUrl(store_details);
+            renderStoreDetailsTemplate('#store_details_template1','#store_details1',store_details);
+            renderStoreDetailsTemplate('#store_details_template2','#store_details2',store_details);
+            renderStoreDetailsTemplate('#store_deatils_map_template','#store_map',store_details);
+            
+            var dimension = (store_details.x_coordinate - 460)  + " " + (store_details.y_coordinate - 230);
+            
+            var store_promos = getPromotionsForIds(store_details.promotions);
+            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image', '#promotion_list','#promotions_not_empty_section','#promotions_empty_section',store_promos);
+            
+            var jobs = getJobsForIds(store_details.jobs);
+            renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',jobs);
+
+            $('#loading').hide();
+            $('#page_content').fadeIn();
+            regions = {};
+            var stores = getStoresList();
+            $.each( stores , function( key, val ) {
+                if(val.svgmap_region != null && typeof(val.svgmap_region)  != 'undefined'){
+                    obj = {};
+                    if(val.store_front_url_abs.indexOf('missing.png') > -1){
+                        obj["tooltip"] = "<div class='tooltip_div'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
+                    }
+                    else{
+                        obj["tooltip"] = "<div class='tooltip_div'><img src='" + val.store_front_url_abs + "'><p class='tooltip_name text-center'>"+val.name+"</p></div>"
+                    }
+                    obj["attr"] = {}
+                    obj["attr"]["href"] = "/stores/"+val.slug
+                    regions[val.svgmap_region] = obj
+                }
+            });
+            load_map(regions, store_details);
+            
+        }
+           
+        
+        
+        
+        loadMallData(renderPageData);
+        
+        function goToStore(store_details){
+            if(typeof(store_details) != 'undefined' && store_details != null){
+                window.location.href = "/stores/"+store_details.slug;
+            }
+        }
+
+        function changeStoreImgUrl(storeObj){
+            if(storeObj.store_front_url.indexOf("/store_fronts/original/missing.png") > -1 ){
+             
+               return "http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/4161e3dd2fe184cd7c763942e8868c0b/logo2.jpg";
+            } else {
+                 return "http://cdn.mallmaverick.com" + storeObj.store_front_url;
+            }
+        }
+     
+        
+    });
+    function load_map(reg, store_details){
+        this_region = {};
+        this_region = store_details.svgmap_region;
+        map = $('#mapsvg_store_detail').mapSvg({
+            source: getSVGMapURL(),    // Path to SVG map
+            colors: {stroke: '#aaa', hover: 0, selected: '#002248'},
+            disableAll: true,
+            height:800,
+            width:1140,
+            regions: reg,
+            tooltipsMode:'custom',
+            loadingText: "loading...",
+            zoom: true,
+            zoomButtons: {'show': true,'location': 'right' },
+            pan:true,
+            panLimit:true,
+            cursor:'pointer',
+            responsive:true,
+            zoomLimit: [0,10],
+        });
+        map.setViewBox(store_details.svgmap_region);
+        map.selectRegion(store_details.svgmap_region);
+        drop_pin(store_details.svgmap_region);
+    }
+    function drop_pin(id){
+        map.marksHide();
+        var coords = map.get_coords(id);
+        var height = parseInt(coords["height"]);
+        var width = parseInt(coords["width"]);
+        var x_offset = (parseInt(width) / 2);
+        var y_offset = (parseInt(height) /2);
+        map.setMarks([{ xy: [coords["x"] - 46 + x_offset, coords["y"] - 110 + y_offset],
+            attrs: {
+                src:  'http://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/1466192060000/pin_93-1.png'
+            }
+        }]);
+        map.setViewBox(id);
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+        $('#btnZoomIn').click()
+    }
+</script>
