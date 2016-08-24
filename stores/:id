@@ -67,7 +67,7 @@ background-color: #FFFFFF ;
                     <li class="promotion-list-item row">
                         <div class="promo-image col-md-2 col-xs-4">
                             <a href="../promotions/{{ slug }}">
-                                <img src="{{promo_image_url}}">
+                                <img src="{{promo_image_url_abs}}">
                             </a>
                         </div>
                         <div class="promo-details col-md-10 col-xs-8">
