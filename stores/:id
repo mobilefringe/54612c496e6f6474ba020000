@@ -75,7 +75,7 @@ background-color: #FFFFFF ;
                                 <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
                             </div>
                             <div class="dates">
-                                {{ start_date }} to {{ end_date }}
+                                {{dates}}
                             </div>
                             <div class="description">
                                 <p>{{ description }}</p>
