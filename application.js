@@ -218,8 +218,7 @@ function renderPosts(blog_template, blog_block, post){
         return 0;
     });
     $.each( item_list , function( key, val ) {
-            var date_blog = new Date(val.publish_date);
-            console.log(val)
+            var date_blog = moment(val.publish_date).tz(getPropertyTimeZone());
             val.published_on = date_blog.getFullYear() + "-" + get_month(date_blog.getMonth()) + "-" + date_blog.getDate()
             var blog_rendered = Mustache.render(blog_template_html,val);
             item_rendered.push(blog_rendered);
