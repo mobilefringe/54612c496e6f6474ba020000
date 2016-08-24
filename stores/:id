@@ -182,7 +182,7 @@ background-color: #FFFFFF ;
                     published_jobs.push(val);
                 } 
             });
-            renderJobsList('#jobs_list', '#job_item_template', jobs);
+            renderJobs('#jobs_list', '#job_item_template', jobs);
 
             $('#loading').hide();
             $('#page_content').fadeIn();
