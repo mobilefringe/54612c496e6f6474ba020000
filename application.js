@@ -219,7 +219,7 @@ function renderPosts(blog_template, blog_block, post){
     });
     $.each( item_list , function( key, val ) {
             var date_blog = moment(val.publish_date).tz(getPropertyTimeZone());
-            val.published_on = date_blog.getFullYear() + "-" + get_month(date_blog.getMonth()) + "-" + date_blog.getDate()
+            val.published_on = date_blog.format("YYYY-MM-DD")
             var blog_rendered = Mustache.render(blog_template_html,val);
             item_rendered.push(blog_rendered);
     });
