@@ -75,7 +75,7 @@ background-color: #FFFFFF ;
                                 <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
                             </div>
                             <div class="promo-store-name">
-                                <h4><a href="{{ promo_store_url }}">{{ tore_name }}</a></h4>
+                                <h4><a href="{{ promo_store_url }}">{{ store_name }}</a></h4>
                             </div>
                             <div class="dates">
                                 {{ start_date }} to {{ end_date }}
