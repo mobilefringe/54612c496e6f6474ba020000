@@ -159,7 +159,11 @@ background-color: #FFFFFF ;
             var dimension = (store_details.x_coordinate - 460)  + " " + (store_details.y_coordinate - 230);
             
             var store_promos = getPromotionsForIds(store_details.promotions);
-            renderPromotions("#promotion_list", '#promotion_item_template', store_promos)
+            if (store_promos.length > 0){
+                $('#promotions_not_empty_section').show()
+                renderPromotions("#promotion_list", '#promotion_item_template', store_promos);
+            }
+            
             
             var jobs = getJobsForIds(store_details.jobs);
             renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',jobs);
