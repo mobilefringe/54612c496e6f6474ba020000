@@ -160,7 +160,7 @@ background-color: #FFFFFF ;
             
             var store_promos = getPromotionsForIds(store_details.promotions);
             var published_promos = [];
-            $.each( promotions , function( key, val ){
+            $.each( store_promos , function( key, val ){
                 today = moment();
                 webDate = moment(val.show_on_web_date)
                 if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
