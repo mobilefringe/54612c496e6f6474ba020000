@@ -204,8 +204,8 @@ function renderPosts(blog_template, blog_block, post){
 
     $.each( post , function( key, val ) {
         
-        var publish_date = new Date(val.publish_date);
-        var today = new Date();
+        var publish_date = moment(val.publish_date).tz(getPropertyTimeZone());
+        var today = moment();
         if (publish_date <= today){
             item_list.push(val);
         }
