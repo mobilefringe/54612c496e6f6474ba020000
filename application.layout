@@ -122,7 +122,7 @@
     
     
     
-        setEndPoint('http://londonderry.mallmaverick.com/api/v3/londonderry/all.json');
+        setEndPoint('http://londonderry.mallmaverick.com/api/v3/twinpines/all.json');
         sessionStorage.setItem('primary_locale', 'en-CA');
         sessionStorage.setItem('secondary_locale', 'fr-CA');
         
