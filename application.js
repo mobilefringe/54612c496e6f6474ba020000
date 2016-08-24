@@ -195,7 +195,7 @@ function renderJobs(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
-function renderPostListTemplate(blog_template, blog_block, post){
+function renderPosts(blog_template, blog_block, post){
 
     var item_list = [];
     var item_rendered = [];
