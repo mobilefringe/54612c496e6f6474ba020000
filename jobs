@@ -57,7 +57,7 @@
         function renderPageData(){
             //renders the jobs list by referencing the template id and the html id
             //for where to place the rendered content. See mallmaverick.js for implementation
-            var jobs = getJobList();
+            var jobs = getJobsList();
             var published_jobs = [];
             $.each( jobs , function( key, val ){
                 today = moment();
