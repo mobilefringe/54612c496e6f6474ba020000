@@ -195,6 +195,39 @@ function renderJobs(container, template, collection){
     $(container).html(item_rendered.join(''));
 }
 
+function renderPostListTemplate(blog_template, blog_block, post){
+
+    var item_list = [];
+    var item_rendered = [];
+    var blog_template_html = $(blog_template).html();
+    Mustache.parse(blog_template_html);   // optional, speeds up future uses
+
+    $.each( post , function( key, val ) {
+        
+        var publish_date = new Date(val.publish_date);
+        var today = new Date();
+        if (publish_date <= today){
+            item_list.push(val);
+        }
+        
+        // item_list.push(val);
+    });
+    item_list.sort(function(a, b){
+        if(a.publish_date > b.publish_date) return -1;
+        if(a.publish_date < b.publish_date) return 1;
+        return 0;
+    });
+    $.each( item_list , function( key, val ) {
+            var date_blog = new Date(val.publish_date);
+            console.log(val)
+            val.published_on = date_blog.getFullYear() + "-" + get_month(date_blog.getMonth()) + "-" + date_blog.getDate()
+            var blog_rendered = Mustache.render(blog_template_html,val);
+            item_rendered.push(blog_rendered);
+    });
+    $(blog_block).html(item_rendered.join(''));
+}
+
+
 
 
 function in_my_time_zone(hour, format){
