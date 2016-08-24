@@ -159,6 +159,14 @@ background-color: #FFFFFF ;
             var dimension = (store_details.x_coordinate - 460)  + " " + (store_details.y_coordinate - 230);
             
             var store_promos = getPromotionsForIds(store_details.promotions);
+            var published_promos = [];
+            $.each( promotions , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date)
+                if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                    published_promos.push(val);
+                } 
+            });
             if (store_promos.length > 0){
                 $('#promotions_not_empty_section').show();
                 renderPromotions("#promotion_list", '#promotion_item_template', store_promos);
