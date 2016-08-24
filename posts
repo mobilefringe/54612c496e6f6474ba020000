@@ -1,0 +1,129 @@
+
+<div class="container blog-list">
+        <h1 class="blogpost_header">BLOG</h1>
+        <div class="" id="blog_list">
+            <script id="blog_item_template" type="x-tmpl-mustache">
+                <div class="blogpost hidden-phone">
+                    <div class="col-xs-5 blogpost_img">
+                       <img src="{{ image_url }}" />
+                    </div>
+                    <div class="col-xs-7 blogpost_txt">
+                        <h2 class="blogpost_title">
+                            <a href='/posts/{{slug}}'>{{ title }}</a>
+                        </h2>
+                        <div class="blogpost_content">
+                            <p class="blogpost_date"><span class="blog-author">by {{ author }}</span> <span class="regular">|</span> {{ published_on }}</p>
+                            <p class="blogpost_discription">{{ body }}</p>
+                            <a href='/posts/{{slug}}' class="readmore">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blogpost visible-phone">
+                    <h2 class="blogpost_title">
+                        <a href='/posts/{{slug}}'>{{ title }}</a>
+                    </h2>
+                    <p class="blogpost_date"><span class="blog-author">by {{ author }{</span> <span class="regular">|</span> {{ published_on }}</p>
+                    <img src="{{ image_url }}" />
+                    <p class="blogpost_discription">{{ body }}</p>
+                    <a href='/posts/{{slug}}' class="readmore">Read More</a>
+                </div>
+            </script>
+        </div>
+    
+</div>
+
+<script>
+$(document).ready(function() {
+    function renderPageData(){
+        //console.log(getPostList())
+        renderPosts('#blog_item_template', '#blog_list',getPostList());
+        
+        $('#loading').hide();
+        $('#page_content').fadeIn('fast');
+    }
+    
+    loadMallData(renderPageData);
+});
+
+function renderPostListTemplate(blog_template, blog_block, post){
+
+    var item_list = [];
+    var item_rendered = [];
+    var blog_template_html = $(blog_template).html();
+    Mustache.parse(blog_template_html);   // optional, speeds up future uses
+
+    $.each( post , function( key, val ) {
+        
+        var publish_date = new Date(val.publish_date);
+        var today = new Date();
+        if (publish_date <= today){
+            item_list.push(val);
+        }
+        
+        // item_list.push(val);
+    });
+    item_list.sort(function(a, b){
+        if(a.publish_date > b.publish_date) return -1;
+        if(a.publish_date < b.publish_date) return 1;
+        return 0;
+    });
+    $.each( item_list , function( key, val ) {
+            var date_blog = new Date(val.publish_date);
+            console.log(val)
+            val.published_on = date_blog.getFullYear() + "-" + get_month(date_blog.getMonth()) + "-" + date_blog.getDate()
+            var blog_rendered = Mustache.render(blog_template_html,val);
+            item_rendered.push(blog_rendered);
+    });
+    $(blog_block).html(item_rendered.join(''));
+}
+
+function get_month (id){
+    var month = ""
+    switch(id) {
+        case 0:
+            month = "01";
+            break;
+        case 1:
+            month = "02";
+            break;
+        case 2:
+            month = "03";
+            break;
+        case 3:
+            month = "04";
+            break;
+        case 4:
+            month = "05";
+            break;
+        case 5:
+            month = "06";
+            break;
+        case 6:
+            month = "07";
+            break;
+        case 7:
+            month = "08";
+            break;
+        case 8:
+            month = "09";
+            break;
+        case 9:
+            month = "10";
+            break;
+        case 10:
+            month = "11";
+            break;
+        case 11:
+            month = "12";
+            break;
+            
+    }
+    return month;
+}
+
+
+</script>
+
+
+
+
