@@ -167,7 +167,7 @@ background-color: #FFFFFF ;
                     published_promos.push(val);
                 } 
             });
-            if (store_promos.length > 0){
+            if (published_promos.length > 0){
                 $('#promotions_not_empty_section').show();
                 renderPromotions("#promotion_list", '#promotion_item_template', store_promos);
             }
