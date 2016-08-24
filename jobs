@@ -66,7 +66,13 @@
                     published_jobs.push(val);
                 } 
             });
-            renderJobs('#jobs_list', '#job_item_template', jobs);
+            if (published_jobs.length > 0){
+                renderJobs('#jobs_list', '#job_item_template', published_jobs);
+            }
+            else{
+                $('#jobs_empty_section').show()
+            }
+            
             $('#loading').hide();
             $('#page_content').fadeIn('fast');
         }
