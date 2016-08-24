@@ -75,7 +75,7 @@ background-color: #FFFFFF ;
                                 <h3><a href="../promotions/{{ slug }}">{{ name }}</a></h3>
                             </div>
                             <div class="dates">
-                                {{ start_date }} to {{ end_date }}
+                                {{dates}}
                             </div>
                             <div class="description">
                                 <p>{{ description }}</p>
@@ -159,7 +159,7 @@ background-color: #FFFFFF ;
             var dimension = (store_details.x_coordinate - 460)  + " " + (store_details.y_coordinate - 230);
             
             var store_promos = getPromotionsForIds(store_details.promotions);
-            renderPromotionsListTemplate('#promotion_item_template','#promotion_item_template_no_image', '#promotion_list','#promotions_not_empty_section','#promotions_empty_section',store_promos);
+            renderPromotions("#promotion_list", '#promotion_item_template', store_promos)
             
             var jobs = getJobsForIds(store_details.jobs);
             renderJobsListTemplate('#job_item_template','#jobs_list','#jobs_not_empty_section','#jobs_empty_section',jobs);
