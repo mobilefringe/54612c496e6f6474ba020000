@@ -36,7 +36,8 @@
 $(document).ready(function() {
     function renderPageData(){
         var posts = getPostList();
-        renderPosts('#blog_item_template', '#blog_list', posts);
+        var published_posts = [];
+        renderPosts('#blog_item_template', '#blog_list', published_posts);
         
         $('#loading').hide();
         $('#page_content').fadeIn('fast');
