@@ -184,7 +184,7 @@ background-color: #FFFFFF ;
             });
             if (published_jobs.length > 0){
                 $('#jobs_not_empty_section').show();
-                renderJobs('#jobs_list', '#job_item_template', jobs);
+                renderJobs('#jobs_list', '#job_item_template', published_jobs);
                 
             }
 
