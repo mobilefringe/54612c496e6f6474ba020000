@@ -41,7 +41,7 @@ $(document).ready(function() {
             today = moment();
             webDate = moment(val.show_on_web_date)
             if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
-                published_promos.push(val);
+                published_posts.push(val);
             } 
         });
         renderPosts('#blog_item_template', '#blog_list', published_posts);
