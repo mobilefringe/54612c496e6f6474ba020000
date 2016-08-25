@@ -37,7 +37,7 @@ $(document).ready(function() {
     function renderPageData(){
         var posts = getPostList();
         var published_posts = [];
-        $.each( promotions , function( key, val ){
+        $.each( posts , function( key, val ){
             today = moment();
             webDate = moment(val.show_on_web_date)
             if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
