@@ -37,6 +37,13 @@ $(document).ready(function() {
     function renderPageData(){
         var posts = getPostList();
         var published_posts = [];
+        $.each( promotions , function( key, val ){
+            today = moment();
+            webDate = moment(val.show_on_web_date)
+            if (today.tz(getPropertyTimeZone()) >= webDate.tz(getPropertyTimeZone())) {
+                published_promos.push(val);
+            } 
+        });
         renderPosts('#blog_item_template', '#blog_list', published_posts);
         
         $('#loading').hide();
