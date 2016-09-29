@@ -32,8 +32,9 @@
             <h2>wifi</h2>
             <div id="wifi"></div>
             
-            <a class="anchor" name="contact_us"></a>
+            
             <h2>contact us</h2>
+            <a class="anchor" name="contact_us"></a>
             <div id="contact_us"></div>
         </div>
     </div>
