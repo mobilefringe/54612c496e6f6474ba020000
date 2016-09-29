@@ -47,8 +47,8 @@
                 </div>
             </div>
             <a class="anchor" name="opening_hours"></a>
-            <div id="contact_us">
-                <%=/opening_hours%>
+            <div id="opening_hours">
+                <%=/centre_hours%>
             </div>
         </div>
     </div>
