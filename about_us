@@ -34,8 +34,6 @@
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
         load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
-        load_json(prefix+"/pages/placevertu-parking-information.json", "#parking_information");
-        load_json(prefix+"/pages/placevertu-contact.json", "#administration_hours");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
