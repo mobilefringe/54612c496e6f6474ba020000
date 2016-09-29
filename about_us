@@ -16,23 +16,23 @@
             </ul>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
-            <a class="scroll" name="leasing_information"></a>
+            <a class="anchor" name="leasing_information"></a>
             <h2>Leasing</h2>
             <div id="leasing_information"></div>
             
-            <a class="scroll" name="mall_info"></a>
+            <a class="anchor" name="mall_info"></a>
             <h2>Mall Info</h2>
             <div id="mall_info"></div>
             
-            <a class="scroll" name="accessibility"></a>
+            <a class="anchor" name="accessibility"></a>
             <h2>accessibility</h2>
             <div id="accessibility"></div>
             
-            <a class="scroll" name="wifi"></a>
+            <a class="anchor" name="wifi"></a>
             <h2>wifi</h2>
             <div id="wifi"></div>
             
-            <a class="scroll" name="contact_us"></a>
+            <a class="anchor" name="contact_us"></a>
             <h2>contact us</h2>
             <div id="contact_us"></div>
         </div>
