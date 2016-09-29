@@ -50,6 +50,10 @@
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
         load_json(prefix+"/pages/londonderry-leasing.json", "#leasing_information");
+        load_json(prefix+"/pages/londonderry-accessibility.json", "#accessibility");
+        load_json(prefix+"/pages/londonderry-mall-info.json", "#mall_info");
+        load_json(prefix+"/pages/londonderry-community-wifi.json", "#wifi");
+        load_json(prefix+"/pages/londonderry-leasing.json", "#contact_us");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
