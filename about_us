@@ -34,7 +34,15 @@
             
             <a class="anchor" name="contact_us"></a>
             <h2>contact us</h2>
-            <div id="contact_us"></div>
+            <div>
+                <p>
+                    137th Avenue & 66th Street<br />
+                    Edmonton, Alberta<br />
+                    T5C 3C8, Canada<br />
+                </p>
+                <div id="contact_us">
+                </div>
+            </div>
         </div>
     </div>
     
