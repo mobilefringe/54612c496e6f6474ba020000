@@ -18,7 +18,10 @@
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
             <a class="anchor" name="leasing_information"></a>
             <h2>Leasing</h2>
-            <div id="leasing_information"></div>
+            <div id="leasing_information">
+                <section id="editor" class="froala-element">
+                </section>
+            </div>
             
             <a class="anchor" name="mall_info"></a>
             <h2>Mall Info</h2>
