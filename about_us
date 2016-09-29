@@ -47,7 +47,9 @@
                 </div>
             </div>
             <a class="anchor" name="opening_hours"></a>
-            <%=/centre_hours%>
+            <div id="contact_us">
+                <%=/opening_hours%>
+            </div>
         </div>
     </div>
     
