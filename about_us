@@ -33,7 +33,7 @@
         var pathArray = window.location.pathname.split( '/' );
         var slug = pathArray[pathArray.length-1];
         prefix = get_prefix();
-        load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#how_to_get_here");
+        load_json(prefix+"/pages/placevertu-how-to-get-here.json", "#leasing_information");
         
         $('#loading').hide();
         $('#page_content').fadeIn();
