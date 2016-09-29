@@ -43,16 +43,12 @@
 <script>
     $(document).ready(function() {
         loadMallDataCached(renderPageData);
-        scroll();
-    });
-    
-    
-    function scroll(){
         $(".scroll").click(function(e) {
             e.preventDefault();
             $('html,body').animate( { scrollTop:$(this.hash).offset().top+20 } , 500);
         });
-    }
+    });
+    
     
     function renderPageData(){
         var pathArray = window.location.pathname.split( '/' );
