@@ -23,6 +23,18 @@
             <a class="anchor" name="mall_info"></a>
             <h2>Mall Info</h2>
             <div id="mall_info"></div>
+            
+            <a class="anchor" name="accessibility"></a>
+            <h2>accessibility</h2>
+            <div id="accessibility"></div>
+            
+            <a class="anchor" name="mall_info"></a>
+            <h2>Mall Info</h2>
+            <div id="mall_info"></div>
+            
+            <a class="anchor" name="mall_info"></a>
+            <h2>Mall Info</h2>
+            <div id="mall_info"></div>
         </div>
     </div>
     
