@@ -46,6 +46,8 @@
                 <div id="contact_us_container">
                 </div>
             </div>
+            <a class="anchor" name="opening_hours"></a>
+            <%=/centre_hours%>
         </div>
     </div>
     
