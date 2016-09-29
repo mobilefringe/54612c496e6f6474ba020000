@@ -16,10 +16,10 @@
             </ul>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
-            <h1 class="visible-xs" data-i18n="nav.leasing"></h1>
+            <h1 class="visible-xs" data-i18n="nav.leasing_information"></h1>
             <a class="anchor" name="leasing_information"></a>
             <h2>Leasing</h2>
-            <div id=""></div>
+            <div id="leasing_information"></div>
         </div>
     </div>
     
