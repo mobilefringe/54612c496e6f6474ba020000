@@ -54,7 +54,7 @@
         loadMallDataCached(renderPageData);
         $(".scroll").click(function(e) {
             e.preventDefault();
-            $('html,body').animate( { scrollTop:$(this.hash).offset().top-120 } , 0);
+            $('html,body').animate( { scrollTop:$(this.hash).offset().top-110 } , 0);
         });
     });
     
