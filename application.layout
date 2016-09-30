@@ -23,7 +23,7 @@
          ga('send', 'pageview');
     </script>
     <!-- favicon -->
-    <link rel="shortcut icon" href="https://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/undefined/Londonderryicon2016.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/undefined/Londonderryicon2016.png" type="image/x-icon" />
    
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: https://bootswatch.com/flatly/ -->
