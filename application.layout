@@ -23,7 +23,7 @@
          ga('send', 'pageview');
     </script>
     <!-- favicon -->
-    <link rel="shortcut icon" href="http://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/undefined/Londonderryicon2016.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://codecloud.cdn.speedyrails.net/sites/57bb4aaa6e6f64731e040000/image/png/undefined/Londonderryicon2016.png" type="image/x-icon" />
    
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: https://bootswatch.com/flatly/ -->
@@ -165,7 +165,7 @@
     <div id="body_content">
     <nav class="navbar navbar-default header-area fixed">
         <div class="visible-xs" style="position:absolute;left:5px;top:0">
-                <a href="../home"><img style="width: 200px;margin-top: 20px;margin-left: 10px;" src="https://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/undefined/logo_londonderry2016.png" alt="site logo"></a>
+                <a href="../home"><img style="width: 200px;margin-top: 20px;margin-left: 10px;" src="https://codecloud.cdn.speedyrails.net/sites/57bb4aaa6e6f64731e040000/image/png/undefined/logo_londonderry2016.png" alt="site logo"></a>
         </div>
         <div class="container " style="">
             
@@ -390,7 +390,7 @@
     <div class="page_content">
       <center id="loading">
       <div>
-          <img src="https://assets.codecloudapp.com/sites/57bb4aaa6e6f64731e040000/image/png/undefined/logo_londonderry2016.png" alt="site logo" style="width:200px">
+          <img src="https://codecloud.cdn.speedyrails.net/sites/57bb4aaa6e6f64731e040000/image/png/undefined/logo_londonderry2016.png" alt="site logo" style="width:200px">
       </div>
       <div><img src="https://kodekloud.s3.amazonaws.com/sites/5447ebb66e6f641987020000/3604f5c26997bea3de504de139debcec/loading.gif" class="" alt="" style="width:40px;margin-top:20px"></div>
           
