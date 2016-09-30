@@ -8,7 +8,7 @@
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z">
                                 <span data-i18n="nav.stores"></span>
-                                <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/6540f7b91971edbf439f2ff0d183c3fa/arrow_white_down.png" class="" alt="">
+                                <img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/6540f7b91971edbf439f2ff0d183c3fa/arrow_white_down.png" class="" alt="">
                             </a>
                         </h4>
                     </div>
@@ -53,11 +53,11 @@
                             <p>{{ description }}</p>
                         </div>
                         <div class="social-links">
-                            <span><a href="http://www.facebook.com/sharer.php?u=http://londonderrymall.com/promotions/{{slug}}" target="_blank">
-<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
+                            <span><a href="https://www.facebook.com/sharer.php?u=https://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt="">
                             </a></span>
-                            <span><a href="http://twitter.com/?status={{name}}%20%20http://londonderrymall.com/promotions/{{slug}}" target="_blank">
-<img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                            <span><a href="https://twitter.com/?status={{name}}%20%20https://londonderrymall.com/promotions/{{slug}}" target="_blank">
+<img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
                                    </a></span>
                         </div>
                     </div>
