@@ -86,7 +86,7 @@
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
                <div class="header" data-i18n="general.directions"></div>
                <a href="../about_us#contact_us">
-           <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_map.jpg" class="" alt="" style="width:100%">
+           <img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_map.jpg" class="" alt="" style="width:100%">
         
     
             </a>
@@ -94,14 +94,14 @@
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item">
                 <div class="header" >Gift cards</div>
                 <a href="../gift_cards">
-                    <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_giftcard.jpg" class="" alt=""  style="width:100%">
+                    <img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/0622c270dd8aaf2ba73a6c0fb42134b9/home_giftcard.jpg" class="" alt=""  style="width:100%">
                 </a>
             </div>
             <div class="col-sm-12 col-sm-6 col-md-3 feature-item ">
                <div data-i18n="general.be_the_first_to_know" class="header feature-bottom-border"></div>
                <span id="join_txt" data-i18n="general.join_txt" style="font-size:14px"></span>
                <div class="newsletter-sign-up" style="margin-top:15px">
-                    <form action="http://mobilefringe.createsend.com/t/d/s/ykbo/" method="post" id="subForm">
+                    <form action="https://mobilefringe.createsend.com/t/d/s/ykbo/" method="post" id="subForm">
                        <label for="subscribe_email" style="display:none"> subscribe email </label>
                             <input id="fieldEmail" name="cm-ykbo-ykbo" type="email" required placeholder="enter email" /> 
                        <div class="checkbox">
