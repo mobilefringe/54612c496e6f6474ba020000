@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
             <h1 data-i18n="nav.jobs"></h1>
-            <img src="http://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3d2feb8fb67ca18031833e0a252090dd/7223_Londonderry_FindAJob2.jpeg" class="hidden-xs" alt="">
+            <img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3d2feb8fb67ca18031833e0a252090dd/7223_Londonderry_FindAJob2.jpeg" class="hidden-xs" alt="">
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9" id="right-content" style="margin-top: 15px;">
             <div id="jobs_not_empty_section">
