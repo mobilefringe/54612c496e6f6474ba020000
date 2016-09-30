@@ -1,0 +1,246 @@
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+            <h1 class="hidden-xs" data-i18n="nav.services"><!--Customer Services--></h1>
+            <img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3d2feb8fb67ca18031833e0a252090dd/7223_Londonderry_GuestServices2.jpeg" class="hidden-xs" alt="">
+            <ul class="button-panel">
+                <li><a href="#guest_services" class="btn btn-default"><span>Guest Service</span><img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/efe6c3ca0d8b7c35dc70c11b3c667cdf/arrow_green.png"><!--GIFT CARDS--></a></li>
+                <li><a href="#security" class="btn btn-default"><span>Security</span><img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/efe6c3ca0d8b7c35dc70c11b3c667cdf/arrow_green.png"><!--CUSTOMER SERVICES--></a></li>
+                <li><a href="#mall_amenities" class="btn btn-default"><span>Mall Amenities</span><img src="https://kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/efe6c3ca0d8b7c35dc70c11b3c667cdf/arrow_green.png"><!--FITNESS WALKING CLUB--></a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
+            <h1 class="visible-xs" data-i18n="nav.services"><!--Customer Services--></h1>
+            
+           
+           
+            
+            <!--CUSTOMER SERVICES-->
+            <a class="anchor" name="guest_services" ></a>
+            <h2>GUEST SERVICES</h2>
+            <div class="primary-locale">
+                <!-- Customer Service CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_54861add6e6f644505040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54861add6e6f644505040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_54861add6e6f644505040000'>
+	  <%=content_block_54861add6e6f644505040000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_54861add6e6f644505040000').editable != 'undefined') {
+			$('#content_block_54861add6e6f644505040000').show();
+	        $('#edit_54861add6e6f644505040000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Customer Service', id: '54861add6e6f644505040000',web_page_id: '54612c4a6e6f6474ba2a0000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/2ee0c6a1e938a25895708c565ea69c4a/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMTo0MDo0NS4xNTFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'Roqmy7i/GGxukuYzixyPcWPG1RY=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_54861add6e6f644505040000').hide();
+        
+        $('#content_block_54861add6e6f644505040000').click(function(event){
+            event.preventDefault();
+            $('#edit_54861add6e6f644505040000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Customer Service CONTENT BLOCK END -->
+            </div>
+           
+            
+            <!--FITNESS WALKING CLUB-->
+            <a class="anchor" name="security" ></a>
+            <h2>SECURITY</h2>
+            <div class="primary-locale">
+               <!-- Walking Club CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_54861b016e6f64532e000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54861b016e6f64532e000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_54861b016e6f64532e000000'>
+	  <%=content_block_54861b016e6f64532e000000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_54861b016e6f64532e000000').editable != 'undefined') {
+			$('#content_block_54861b016e6f64532e000000').show();
+	        $('#edit_54861b016e6f64532e000000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Walking Club', id: '54861b016e6f64532e000000',web_page_id: '54612c4a6e6f6474ba2a0000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/f474713af9a481a0db2d9b99ce31079f/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMTo0MToyMS4zNThaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'bMg6BFq19X389JOR4fnGGrsDqgU=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_54861b016e6f64532e000000').hide();
+        
+        $('#content_block_54861b016e6f64532e000000').click(function(event){
+            event.preventDefault();
+            $('#edit_54861b016e6f64532e000000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Walking Club CONTENT BLOCK END -->
+            </div>
+   
+            
+            
+            <!--WELCOME TO FAMILIES-->
+            <a class="anchor" name="mall_amenities"></a>
+            <h2>Mall Amenities</h2>
+            <div class="primary-locale">
+       <!-- Welcome Families CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_54861b2b6e6f644b51000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54861b2b6e6f644b51000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_54861b2b6e6f644b51000000'>
+	  <%=content_block_54861b2b6e6f644b51000000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_54861b2b6e6f644b51000000').editable != 'undefined') {
+			$('#content_block_54861b2b6e6f644b51000000').show();
+	        $('#edit_54861b2b6e6f644b51000000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Welcome Families', id: '54861b2b6e6f644b51000000',web_page_id: '54612c4a6e6f6474ba2a0000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/8e0248a49823eb7fd4f7e7a6a27b09d7/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMTo0MjowMy42NDRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: '6uTT9eUN7h2k+y1HJx4CPeNfJp4=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_54861b2b6e6f644b51000000').hide();
+        
+        $('#content_block_54861b2b6e6f644b51000000').click(function(event){
+            event.preventDefault();
+            $('#edit_54861b2b6e6f644b51000000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Welcome Families CONTENT BLOCK END -->
+            </div>
+    
+
+            
+            </div>
+ 
+
+       
+      
+     </div>
+    </div>
+
+<script>
+    $(document).ready(function() {
+        $('#loading').hide();
+        $('#page_content').fadeIn();
+    });
+</script>
