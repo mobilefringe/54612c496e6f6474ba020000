@@ -1,0 +1,322 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <h1 class="visible-xs" data-i18n="nav.contact"><!--CONTACT--></h1>
+            
+            <!--DIRECTIONS-->
+            <a name="directions"></a>
+            <h2 data-i18n="nav.subnav.directions">&nbsp;</h2>
+            <div style="min-height:350px">
+            <%=/centre_address_map%>
+            </div>
+            <a name="how_to_get_here"></a>
+            <h2>How to get here ardy</h2>
+            <div class="primary-locale">
+        <!-- how to get here CONTENT BLOCK START-->    
+            <!-- How to get here CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_54860ca16e6f640be9000000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_54860ca16e6f640be9000000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_54860ca16e6f640be9000000'>
+	  <%=content_block_54860ca16e6f640be9000000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_54860ca16e6f640be9000000').editable != 'undefined') {
+			$('#content_block_54860ca16e6f640be9000000').show();
+	        $('#edit_54860ca16e6f640be9000000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'How to get here', id: '54860ca16e6f640be9000000',web_page_id: '54612c4a6e6f6474ba350000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/1374e3d28b84c976a0402c3e848229d7/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMDo0MDowMS40MDhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'F8YrzUbjUhrNg3M07ExgZv+2SDc=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_54860ca16e6f640be9000000').hide();
+        
+        $('#content_block_54860ca16e6f640be9000000').click(function(event){
+            event.preventDefault();
+            $('#edit_54860ca16e6f640be9000000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- How to get here CONTENT BLOCK END -->
+<!-- how to get here CONTENT BLOCK END -->
+            </div>
+         
+                
+            <!--PARKING INFORMATION-->
+            <a name="parking_information"></a>
+            <h2>Parking Information</h2>
+            <div class="primary-locale">
+         <!-- Parking Information CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_5486138e6e6f644aa8020000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_5486138e6e6f644aa8020000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_5486138e6e6f644aa8020000'>
+	  <%=content_block_5486138e6e6f644aa8020000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_5486138e6e6f644aa8020000').editable != 'undefined') {
+			$('#content_block_5486138e6e6f644aa8020000').show();
+	        $('#edit_5486138e6e6f644aa8020000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Parking Information', id: '5486138e6e6f644aa8020000',web_page_id: '54612c4a6e6f6474ba350000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/e7617431581e1dd00e738dff8bee7962/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMTowOTozNC43NTFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'eAyXhW4XzvuKPld5FptHEjQUfm8=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_5486138e6e6f644aa8020000').hide();
+        
+        $('#content_block_5486138e6e6f644aa8020000').click(function(event){
+            event.preventDefault();
+            $('#edit_5486138e6e6f644aa8020000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Parking Information CONTENT BLOCK END -->
+            </div>
+    
+            
+       
+          
+         
+            
+            <!--ADMINISTRATION HOURS-->
+            <a name="administration_hours"></a>
+            <h2>ADMINISTRATION HOURS</h2>
+            <div class="primary-locale">
+       <!-- Administration Hours CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_548613de6e6f644aa8040000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_548613de6e6f644aa8040000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_548613de6e6f644aa8040000'>
+	  <%=content_block_548613de6e6f644aa8040000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_548613de6e6f644aa8040000').editable != 'undefined') {
+			$('#content_block_548613de6e6f644aa8040000').show();
+	        $('#edit_548613de6e6f644aa8040000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '/web_pages/save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Administration Hours', id: '548613de6e6f644aa8040000',web_page_id: '54612c4a6e6f6474ba350000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/937990eca3a346cf665acb3f91555154/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMToxMDo1NC4xMTZaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'oVPSxULOvIYvN0WeUJHDoa6qrLY=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_548613de6e6f644aa8040000').hide();
+        
+        $('#content_block_548613de6e6f644aa8040000').click(function(event){
+            event.preventDefault();
+            $('#edit_548613de6e6f644aa8040000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Administration Hours CONTENT BLOCK END -->
+            </div>
+           
+            
+            <!--ACCESSIBILITY-->
+            <a name="accessibility"></a>
+            <h2>ACCESSIBILITY</h2>
+            <div class="primary-locale">
+  <!-- Accessibility CONTENT BLOCK START-->    
+<section id="editor" class="froala-element">
+  <a href="#" style="font-size:20px;display:none" id="content_block_548613f56e6f644aa8050000">Save&nbsp;&nbsp;</a>&nbsp;&nbsp;<span id="status_548613f56e6f644aa8050000" style="font-size:15px;margin-top:0px;color:#51A351" class="glyphicon glyphicon-ok success" data-toggle="tooltip">Success</span>
+  <div id='edit_548613f56e6f644aa8050000'>
+	  <%=content_block_548613f56e6f644aa8050000%>
+  </div>
+  <script>
+      $(function(){
+		if (typeof $('#edit_548613f56e6f644aa8050000').editable != 'undefined') {
+			$('#content_block_548613f56e6f644aa8050000').show();
+	        $('#edit_548613f56e6f644aa8050000').editable({
+				buttons: ["bold", "italic", "underline", "strikeThrough",'insertHorizontalRule', "fontFamily", "fontSize", "color", "formatBlock", "blockStyle", 'table',"align", "insertOrderedList", "insertUnorderedList", "outdent", "indent", "selectAll", "createLink", "insertImage", "insertVideo", "undo", "redo", "html"],
+				inlineMode: false,
+                paragraphy: true,
+                alwaysBlank: true,
+                toolbarFixed: true,
+                imageMove: true,
+                saveURL: '../save_content_block',
+                saveRequestType: 'POST',
+	            saveParams: {name:'Accessibility', id: '548613f56e6f644aa8050000',web_page_id: '54612c4a6e6f6474ba350000',authenticity_token: '<%=form_authenticity_token%>'},
+	            autosave: false,
+				minHeight: 200,
+				imageUploadToS3: {
+                    bucket: 'kodekloud',
+                    region: 's3',
+                    keyStart: 'site/54612c496e6f6474ba020000/27d85af82c368d116b8dc7aede345b94/${filename}',
+					callback: function (url, key) {
+                      $.ajax({
+                            url : "../add_upload_from_content_block",
+                            type: "POST",
+                            data : {authenticity_token: '<%=form_authenticity_token%>',upload:{url:url}},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                                console.log('saved image to uploads');
+                                console.log(textStatus);
+                            }
+                        });
+                    },
+                    params: {
+					  utf8: '&#x2713;',
+                      acl: 'public-read', // ACL according to Amazon Documentation.
+                      AWSAccessKeyId: 'AKIAJDG7LVTTRXSI4QEA', // Access Key from Amazon.
+                      policy: 'eyJleHBpcmF0aW9uIjoiMjI4OC0wOS0yMVQyMToxMToxNy40MjhaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkQ29udGVudC1UeXBlIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRzdWNjZXNzX2FjdGlvbl9zdGF0dXMiLCIiXSxbInN0YXJ0cy13aXRoIiwiJFgtUmVxdWVzdGVkLVdpdGgiLCIiXSx7ImJ1Y2tldCI6ImtvZGVrbG91ZCJ9LHsiYWNsIjoicHVibGljLXJlYWQifV19', // Policy string computed in the backend.
+                      signature: 'w0FdyUdqklPr6iiNFVefuMIFolw=', // Signature computed in the backend.
+                    }
+                }
+            
+	        })
+		}
+		$('#status_548613f56e6f644aa8050000').hide();
+        
+        $('#content_block_548613f56e6f644aa8050000').click(function(event){
+            event.preventDefault();
+            $('#edit_548613f56e6f644aa8050000').editable("save");
+        });
+      });
+  </script>
+</section>    
+<!-- Accessibility CONTENT BLOCK END -->
+            </div>
+          
+        </div>
+        
+        <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <h1 class="hidden-xs">Contact Us</h1>
+            <img src="https://d33wyx0pza9yj4.cloudfront.net/sites/5431987c6e6f64102a020000/4d412bf5c9fdf38eed9830f9db5fa28a/img_contactus.jpg" class="hidden-xs" alt="">
+            <ul class="button-panel">
+                <li><a href="#directions" class="btn btn-default"><span data-i18n="nav.subnav.directions"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--DIRECTIONS--></a></li>
+                <li><a href="#how_to_get_here" class="btn btn-default" ><span data-i18n="nav.subnav.how_to_get_here"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--HOW TO GET HERE--></a></li>
+                <li><a href="#parking_information" class="btn btn-default"><span data-i18n="nav.subnav.parking_information"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--PARKINING INFORMATION--></a></li>
+                <li><a href="#opening_hours" class="btn btn-default" ><span data-i18n="nav.subnav.opening_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--OPENING HOURS--></a></li>
+                <li><a href="#administration_hours" class="btn btn-default"><span data-i18n="nav.subnav.administration_hours"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ADMINISTRATION HOURS--></a></li>
+                <li><a href="#accessibility" class="btn btn-default"><span data-i18n="nav.subnav.accessibility"></span><img src="https://testbucketblurt.s3-us-west-2.amazonaws.com/sites/54205e6a6a616d39c5860000/04dd4f94364d574f0365c89cbafa12c4/btn_search_arrow.png"><!--ACCESSIBILITY--></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#loading').hide();
+        $('#page_content').fadeIn('fast');
+    });
+</script>
+
