@@ -593,7 +593,7 @@
              var pp = getPopups()[0];
             
             if (pp != undefined){
-                $('#pp_img').attr('src', 'https://mallmaverick.cdn.speedyrails.net' +pp.photo_url)
+                $('#pp_img').attr('src', '//mallmaverick.cdn.speedyrails.net' +pp.photo_url)
                 $('#pp_url').attr('href',  pp.photo_link)
             }
             //popup starts
