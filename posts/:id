@@ -1,0 +1,114 @@
+<div class="container" id="blog_detail">  
+    <script id="blog_detail_template" type="x-tmpl-mustache">
+            <h1 class="blogpost_detail_header">BLOG</h1>
+            <a href="/posts" class="back_to">< Back to the list</a>
+        <h2 class="blogpost_detail_title">{{ title }}</h2>
+      
+        <p class="blogpost_date">{{ published_on }} + {{ author }}</p>
+        <div class="blog_img_section">
+            <img class="blogpost_detail_img" src="{{image_url}}" />
+        </div>
+        <div class="blog_detail_description" style="float:left">
+        {{{ html_body }}}
+        </div>
+    </script>
+    <!-- DISQUS start -->
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '{{disqus}}'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <!-- DISQUS end -->
+</div>
+<script>
+    $(document).ready(function() {
+        function renderPageData(){
+             var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var blog_detail = getPostDetailsBySlug(slug);
+           // checkErrorPage(blog_detail);
+           
+            renderPostDetailTemplate('#blog_detail_template', '#blog_detail',blog_detail);
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+            
+            //change img url
+            $('.blog_detail_description img').attr('src',function(i,e){
+                return e.replace("/system","//mallmaverick.cdn.speedyrails.net/system");
+            });
+        }
+        
+        loadMallData(renderPageData);
+    });
+    
+    function renderPostDetailTemplate(blog_template, blog_block, post){
+    
+        var item_list = [];
+        var blog_template_html = $(blog_template).html();
+        Mustache.parse(blog_template_html);   // optional, speeds up future uses
+        var date_blog = new Date(post.publish_date);
+        post.published_on = date_blog.getFullYear() + "-" + get_month(date_blog.getMonth()) + "-" + date_blog.getDate()
+       
+        var blog_rendered = Mustache.render(blog_template_html,post);
+        item_list.push(blog_rendered);
+       
+
+        $(blog_block).html(item_list.join(''));
+    }
+    
+    function get_month (id){
+        var month = ""
+        switch(id) {
+            case 0:
+                month = "01";
+                break;
+            case 1:
+                month = "02";
+                break;
+            case 2:
+                month = "03";
+                break;
+            case 3:
+                month = "04";
+                break;
+            case 4:
+                month = "05";
+                break;
+            case 5:
+                month = "06";
+                break;
+            case 6:
+                month = "07";
+                break;
+            case 7:
+                month = "08";
+                break;
+            case 8:
+                month = "09";
+                break;
+            case 9:
+                month = "10";
+                break;
+            case 10:
+                month = "11";
+                break;
+            case 11:
+                month = "12";
+                break;
+                
+        }
+        return month;
+    }
+
+</script>    
+    
+    
