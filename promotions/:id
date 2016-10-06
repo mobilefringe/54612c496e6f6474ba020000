@@ -1,0 +1,106 @@
+<div class="container promotions">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-3" id="sidebar">
+            <h1><a href="../promotions" data-i18n="nav.promotions"></a></h1>
+            <div class="panel-group stores" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="by_a_z" data-i18n="nav.stores">
+                              
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body list-group" id="stores_with_promotions">
+                            <script id="store_item_template" type="x-tmpl-mustache">
+                                <a class="list-group-item" href="../promotions#{{name}}">
+                                    {{name}}
+                                </a>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9" id="right-content">
+            <div id="promotion_details_id">
+            </div>
+            <script id="promotion_details_template" type="x-tmpl-mustache">
+                        <div class="promo-details ">
+                            <div class="name">
+                                <h3>{{ name }}</h3>
+                            </div>
+                            <div class="store-name">
+                                <h4><a href="/stores/{{ store_detail_btn }}">{{ store_name }}</a></h4>
+                            </div>
+                            <div class="dates">
+                                {{dates}}
+                            </div>
+                            <div class="description">
+                                <p>{{{ rich_description }}}</p>
+                            </div>
+                            <div class="social-links detail-social">
+                                <span>
+                                    <a href="//www.facebook.com/sharer.php?u=https://londonderrymall.com/promotions/{{slug}}" target="_blank">
+                                        <img src="//kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/facebook.png" class="" alt=""> 
+                                    </a>
+                                </span>
+                                <span><a href="//twitter.com/?status={{name}}%20%20https://londonderrymall.com/promotions/{{slug}}" target="_blank">
+                                            <img src="//kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/3dde114989a7fcfddac2cc3f1341764a/twitter.png" class="" alt="">
+                                       </a></span>
+                            </div>
+                        </div>
+                        <div class="promo-image promo-detail-img">
+                            <img src="{{promo_image_url_abs}}">
+                        </div>
+            </script>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    $(document).ready(function() {
+        
+        function renderPageData(){
+            var pathArray = window.location.pathname.split( '/' );
+            var slug = pathArray[pathArray.length-1];
+            var promotion_details = getPromotionDetailsBySlug(slug);
+            checkErrorPage(promotion_details);
+            renderPromotionDetails('#promotion_details_id', '#promotion_details_template',promotion_details);
+            renderStoresWithPromotionsTemplate('#store_item_template','#stores_with_promotions');
+            $('#loading').hide();
+            $('#page_content').fadeIn('fast');
+            
+            
+             $.ajax({
+                url : "/web_pages/update_dynamic_page_meta_data",
+                type: "POST",
+                data : {authenticity_token: '<%=form_authenticity_token%>' ,
+                        web_page_id: '<%=web_page_id%>', path:window.location.pathname,
+                        meta_lang:'EN',
+                        meta_title:"Londonderry Mall | " + promotion_details.name,
+                        meta_description:   promotion_details.name + promotion_details.description,
+                        meta_keywords:''
+                        
+                        
+                },
+                success: function(data, textStatus, jqXHR)
+                {
+                    
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    
+                }
+            });
+        
+        }
+        
+        loadMallData(renderPageData);
+    });
+
+</script>
