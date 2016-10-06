@@ -1,0 +1,202 @@
+<style>
+    .page_content{
+        padding-top:0px;
+    }
+</style>
+<div class="contest-container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="contest_image">
+                <script id="contest_template" type="x-tmpl-mustache">
+                    <img alt="..." src="{{photo_url_abs}}">
+                </script>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <!--<p><em>Valentine's Day Giveaways!</em></p>-->
+            <p><em>You and a guest could be joining us for our V.I.Tea Party in honor of Davids Tea’s grand opening! Rules and regulation apply.</em><br></p>
+            <p><em>One entry per person. See <a href="//kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/4ee87f0d5fc7d2aeaf22d6c4b2f6bead/V.I.Tea%20Party%20Rules%20&%20Regulations.pdf" target="_blank">rules & regulations</a> for full contest details.</em></p>
+            
+            <hr class="break-line"/>
+        </div> 
+       
+           <form accept-charset="UTF-8" action="//mobilefringe.createsend.com/t/d/s/tkiiht/" onsubmit="return validateForm()" id="contest_form" method="post">
+                <input id="full-name" type="hidden" name="cm-name" value=""/>
+                <input id="gender-hidden" type="hidden" name="cm-f-jrtrui" value=""/>
+                
+                <div class="form-group col-md-6">
+                    <label for="first_name">*First Name</label>
+                    <input required type="text" id="first_name" class="form-control" value="" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="last_name">*Last Name</label>
+                    <input required type="text" id="last_name" class="form-control" value=""/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">*Email</label>
+                    <input required type="email" id="email" class="form-control" name="cm-tkiiht-tkiiht" value=""/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">*Phone Number</label>
+                    <input required type="text" id="phone" class="form-control" name="cm-f-jrtruy" value=""/>
+                </div>
+                <div class="form-group col-md-3 col-xs-5">
+                    <label for="postal_code">*Postal Code</label>
+                    <input required type="text" class="form-control" id="postal_code" name="cm-f-jrtruj" value=""/>
+                </div>
+                <div class="form-group col-md-1 col-xs-3">
+                    <label for="age">*Age</label>
+                    <input required type="text" id="age" class="form-control" name="cm-f-jrtrut"  value=""/>
+                </div>
+                   
+                <div class="form-group col-md-2 col-xs-4">
+                    <label for="gender">*Gender</label>
+                    <select required id="gender" class="form-control" name="">
+                        <option value="">Choose</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>                
+                <div class="col-md-6 col-xs-12 checkbox-subscribe">          
+                    <label for="mall_info">
+                        <input class="" id="mall_info" type="checkbox" name="cm-ol-ykbo" />
+                        Subscribe to Londonderry Newsletter
+                    </label>
+                </div> 
+                
+                <!--Captcha-->
+                <!--<div class="col-xs-12 captcha-box">-->
+                <!--    <div class="g-recaptcha" data-sitekey="6LcHbgETAAAAAEBggsqVkerFq4psw6l4jgTqGpVt"></div>-->
+                <!--</div>-->
+                <div class="col-xs-12 checkbox-agree">
+                    <label><input type="checkbox" id="agree_terms"> I understand the Londonderry Online <a href="//kodekloud.s3.amazonaws.com/sites/54612c496e6f6474ba020000/4ee87f0d5fc7d2aeaf22d6c4b2f6bead/V.I.Tea%20Party%20Rules%20&%20Regulations.pdf" target="_blank"> Rules and Regulations</a></label>
+                </div>
+                <div class="col-xs-12 contest-submit-btn">
+                    <input class="btn btn-success" name="commit" type="submit" value="Submit" style="width:325px; height: 45px;">
+                   
+                </div>
+                
+            </form>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        function renderPageData(){
+            var repoList = getRepoList();
+            renderContest("#contest_template", "#contest_image", repoList);
+        }
+        loadMallData(renderPageData);
+
+        $('#loading').hide();
+        $('#page_content').fadeIn('fast');
+    });
+    
+    function renderContest(contest_template, contest_image, repo){
+    
+        var item_list = [];
+        var item_rendered = [];
+        var contest_template_html = $(contest_template).html();
+        Mustache.parse(contest_template_html);   // optional, speeds up future uses
+    
+        
+        $.each( repo , function( key, val ) {
+            if( val.name == "contest"){
+                $.each( val.images, function( key, image ) { 
+                    var repo_rendered = Mustache.render(contest_template_html,image);
+                    item_rendered.push(repo_rendered);
+                });
+            }
+        });
+        $(contest_image).show();
+        $(contest_image).html(item_rendered.join(''));
+    }
+    
+    function validateForm() {
+        // var values = {};
+        // $.each($('#contest_form').serializeArray(), function(i, field) {
+        //     values[field.name] = field.value;
+        // });
+        if ($("#first_name").val() == ""){
+            alert("Please Enter First Name");
+            $("#first_name").focus();
+            return false;
+        } else if ($("#last_name").val() == ""){
+            alert("Please Enter Last Name");
+            $("#last_name").focus();
+            return false;
+        } else if ($("#email").val() == ""){
+            alert("Please Enter Email");
+            $("#email").focus();
+            return false;
+        } else if(!isValidEmailAddress($("#email").val())){
+            alert("Please Enter a valid email address");
+            $("#email").focus();
+            return false;
+        } else if ($("#phone").val() == ""){
+            alert("Please Enter Phone Number");
+            $("#phone").focus();
+            return false;
+        } else if ($("#postal_code").val() == ""){
+            alert("Please Enter Postal Code");
+            $("#postal_code").focus();
+            return false;
+        } else if (isNotNumber($("#age").val())){
+            alert("Please Enter Valide Age");
+            $("#age").focus();
+            return false;
+        } else if($("#gender").val() == ""){
+            alert("Please Choose Gender");
+            $("#gender").focus();
+            return false;    
+        } else if ($("#agree_terms").prop("checked") != true){
+            alert("Please agree to the term and conditions before submitting the contest.");
+            $("#agree_terms").focus();
+            return false;
+        } else {
+            var full_name = $("#first_name").val() + " " + $("#last_name").val();
+            $("#full-name").val(full_name);
+            $("#gender-hidden").val($("#gender").val());
+            
+            var visited = $.cookie("visited_contest");
+            visited = 100; 
+            $.cookie('visited_contest', visited, { expires: 7 }); 
+      
+            return true;
+        }
+    }
+    function testAjax(capchaResponse){
+        $.ajax({
+                url : "https://www.google.com/recaptcha/api/siteverify",
+                type: "GET",
+                data : {
+                    secret: "6LcHbgETAAAAAMU4La3LpuJUPDMPf3i2tT9kguTF",
+                    response: capchaResponse
+                    
+                },
+                dataType: "jsonp",
+               crossDomain: true,
+               jsonp:false,
+               jsonpCallback: "m3Callback",
+                success: function(data, textStatus, jqXHR)
+                {
+                 
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                    
+                }
+            });
+    }
+    function isNotNumber(input){
+        if(input.trim() == ""){
+            return true;
+        }
+        var re = isNaN(input);
+        return re;
+    }
+    function isValidEmailAddress(email) { 
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }  
+</script>
