@@ -252,7 +252,9 @@
                 </div>
             </div>
         </div>
-        <div style="display:block;text-align:center">
+        
+        <div class="container nav-items hidden-xs desktop-nav hidden-phone" id="nav_items_sticky">
+            <div style="display:block;text-align:center">
     <a href="http://humanitariancoalition.ca/20vic" target="_blank" id="matthew_link">
         <img src="/system/site_images/photos/000/022/451/original/img1.jpg?1475947720" />
     </a>
@@ -266,8 +268,6 @@
         });
     </script>
 </div>
-        <div class="container nav-items hidden-xs desktop-nav hidden-phone" id="nav_items_sticky">
-            
         
 
             <!-- Collect the nav links, forms, and other content for toggling -->
