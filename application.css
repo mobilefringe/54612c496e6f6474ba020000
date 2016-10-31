@@ -818,12 +818,13 @@ padding-top: 5px;
 	border-top:0px;
 	border-left:0px;
 	border-right:0px;
-	.description p {
-        overflow: hidden;
-        max-height: 60px;
-    }
 }
 
+.promotion-list-item .promo-details .description p {
+    overflow: hidden;
+    max-height: 60px;
+}
+    
 .promo-details .name a{
     font-size: 1.0em;
     color:#000;
