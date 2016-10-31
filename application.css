@@ -953,8 +953,8 @@ padding-top: 5px;
     border-radius:0px;
 }
 .description p{
-    overflow: hidden;
-    max-height: 60px;
+    /*overflow: hidden;*/
+    /*max-height: 60px;*/
 }
 .blog_detail_description{
     margin-top:15px;
