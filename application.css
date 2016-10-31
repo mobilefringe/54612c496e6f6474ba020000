@@ -884,6 +884,11 @@ padding-top: 5px;
     overflow:hidden;
 }
 
+.promo-details .description p{
+    word-wrap:break-word;
+    overflow: visible;
+}
+
 .promo-details .social-links img{
     height:30px;
     width:auto;
