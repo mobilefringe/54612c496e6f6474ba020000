@@ -465,21 +465,6 @@
         </div>
 
     </div>
-    <div style="display:block;text-align:center">
-        <a href="http://humanitariancoalition.ca/20vic" target="_blank" id="matthew_link">
-            <img src="//mallmaverick.com/system/site_images/photos/000/022/451/original/img1.jpg?1475947720" />
-        </a>
-        <script>
-            $(document).ready(function(e){
-                $('#matthew_link').click(function(e){
-                    console.log("here")
-                    var url = $(this).attr("href");
-                    ga('send', 'event', 'Outbound Links', e.currentTarget.host, url, 0);
-                });
-            });
-        </script>
-    </div>
-
     <div class="footer-signature hidden-phone">
         <div class="container">
             <div class="row">
